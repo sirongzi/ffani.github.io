@@ -5,6 +5,7 @@
 <lastmod>2024-08-05T03:30:09+08:00</lastmod>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/bak/2013-12-24-categories/</loc>
 </url>
 <url>
@@ -50,6 +51,8 @@
 <loc>http://localhost:4000/tag/</loc>
 </url>
 <url>
+=======
+>>>>>>> 8bd9f47 (first)
 <loc>http://localhost:4000/archives/</loc>
 </url>
 <url>
@@ -62,19 +65,33 @@
 <loc>http://localhost:4000/category/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/tags/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
+=======
+<loc>http://localhost:4000/tag/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/tags/</loc>
+>>>>>>> 8bd9f47 (first)
 </url>
 <url>
 <loc>http://localhost:4000/friendship/</loc>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/README.en/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/bak/2013-12-24-%E4%B8%AD%E6%96%87%E6%B8%AC%E8%A9%A6/</loc>
+=======
+<loc>http://localhost:4000/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/README.en/</loc>
+>>>>>>> 8bd9f47 (first)
 </url>
 <url>
 <loc>http://localhost:4000/assets/lib/fastclick/</loc>
