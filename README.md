@@ -4,7 +4,7 @@
 
 更多内容请访问wordpress主页————
 
-[自运营wordpress博客](https://sirongzi.xyz/)
+[自运营的wordpress博客](https://sirongzi.xyz/)
 
 [CC托管的wordpress博客](https://sirongzi.day/)
 
