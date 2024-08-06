@@ -119,9 +119,17 @@
 <meta property="og:site_name" content="丝丝的小窝">
 <meta property="og:description" content="1、上传最新的img/iso镜像文件至local(pve)-ISO镜像，去除中文名，只用英文、数字和字符，并拷贝镜像上传地址。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715934331-image-1600x730.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715933866-image.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715934517-image-1600x447.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715934850-image-1600x848.jpg">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715934865-image-1600x739.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715934934-image-1600x1139.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715934981-image-1600x725.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PVE下快速更新OpenWrt固件方法">
 <meta name="twitter:description" content="1、上传最新的img/iso镜像文件至local(pve)-ISO镜像，去除中文名，只用英文、数字和字符，并拷贝镜像上传地址。">
+<meta name="twitter:image" content="/assets/wp-content/uploads/2024/05/1715934331-image-1600x730.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -501,9 +509,7 @@
 
   <p>1、上传最新的img/iso镜像文件至local(pve)-ISO镜像，去除中文名，只用英文、数字和字符，并拷贝镜像上传地址。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934331-image-1600x730.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/05/1715933866-image.png)</figure>
-<p>2、创建新的虚拟机。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934331-image-1600x730.png" alt="" /><img src="/assets/wp-content/uploads/2024/05/1715933866-image.png" alt="" />2、创建新的虚拟机。</p>
 
 <p>操作系统：选择不使用任何介质<br />
 系统：全部默认<br />
@@ -517,9 +523,9 @@ CPU：核心改为4<br />
 
 <p>101是你刚才创建的虚拟机标签，/var/lib/vz/template/iso/20240510-openwrt-x64-R24.5.1.img是你刚才上传所复制的地址。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934517-image-1600x447.png)</figure>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>qm importdisk 101 /var/lib/vz/template/iso/20240510-openwrt-x64-R24.5.1.img local-lvm
-</code></pre></td></tr></tbody></table></div></div>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934517-image-1600x447.png" alt="" /><code class="language-plaintext highlighter-rouge">
+qm importdisk 101 /var/lib/vz/template/iso/20240510-openwrt-x64-R24.5.1.img local-lvm
+</code></p>
 
 <p>4、设置虚拟机磁盘和开机启动/引导顺序</p>
 
@@ -528,13 +534,9 @@ CPU：核心改为4<br />
 调整引导顺序，将 sata0 磁盘启用并调整到第一位；<br />
 按顺序添加虚拟网卡，将之前虚拟出来的网卡都依次添加进去，还是使用默认VirtIO模型，第一个添加的网卡将会是WAN口。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934850-image-1600x848.jpg)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934865-image-1600x739.png)</figure>
-<p>5、回到现在的OpenWrt后台地址，生成备份，lucky大吉插件需要单独生成备份。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934850-image-1600x848.jpg" alt="" /><img src="/assets/wp-content/uploads/2024/05/1715934865-image-1600x739.png" alt="" />5、回到现在的OpenWrt后台地址，生成备份，lucky大吉插件需要单独生成备份。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934934-image-1600x1139.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934981-image-1600x725.png)</figure>
-<p>6、启动新的虚拟机，关闭之前的虚拟机。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934934-image-1600x1139.png" alt="" /><img src="/assets/wp-content/uploads/2024/05/1715934981-image-1600x725.png" alt="" />6、启动新的虚拟机，关闭之前的虚拟机。</p>
 
 <p>修改电脑地址为新虚拟机的默认ip网段地址，访问新的虚拟机恢复备份；<br />
 恢复备份后重新设置电脑地址为自动获取；<br />

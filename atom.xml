@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-06T21:51:14+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">丝丝的小窝</title><subtitle>饭饭的github小窝,一个白嫖的网站</subtitle><author><name>稲葉飯</name></author><entry><title type="html">2024年7月新番快评</title><link href="http://localhost:4000/2024/07/2024%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E5%BF%AB%E8%AF%84/" rel="alternate" type="text/html" title="2024年7月新番快评" /><published>2024-07-16T01:23:18+08:00</published><updated>2024-07-16T01:23:18+08:00</updated><id>http://localhost:4000/2024/07/2024e5b9b47e69c88e696b0e795aae5bfabe8af84</id><content type="html" xml:base="http://localhost:4000/2024/07/2024%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E5%BF%AB%E8%AF%84/"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="http://localhost:4000/atom.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-06T22:17:31+08:00</updated><id>http://localhost:4000/atom.xml</id><title type="html">丝丝的小窝</title><subtitle>饭饭的github小窝,一个白嫖的网站</subtitle><author><name>稲葉飯</name></author><entry><title type="html">2024年7月新番快评</title><link href="http://localhost:4000/2024/07/2024%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E5%BF%AB%E8%AF%84/" rel="alternate" type="text/html" title="2024年7月新番快评" /><published>2024-07-16T01:23:18+08:00</published><updated>2024-07-16T01:23:18+08:00</updated><id>http://localhost:4000/2024/07/2024e5b9b47e69c88e696b0e795aae5bfabe8af84</id><content type="html" xml:base="http://localhost:4000/2024/07/2024%E5%B9%B47%E6%9C%88%E6%96%B0%E7%95%AA%E5%BF%AB%E8%AF%84/"><![CDATA[<blockquote>
   <p><cite>分为S、A（AAA私心推荐）、B、C（cute）、F（fantastic）五个等级，对应必看新番<sup>S</sup>、话题佳作<sup>A</sup>、领域尚可<sup>B</sup>、<s>可爱</s><sup>C</sup><s>和传奇</s><sup>F</sup></cite></p>
 </blockquote>
 
@@ -137,93 +137,82 @@ F：㉚魔法少女与邪恶曾经敌对、㉛多数欠</p>
 
 <p>2、高级设置如图</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720957881-image.png)</figure>
-<p>3、规则管理把所有√打上，然后保存&amp;应用并手动更新一次</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720957881-image.png" alt="" />3、规则管理把所有√打上，然后保存&amp;应用并手动更新一次</p>
 
 <p>4、模式只推荐中国列表以外</p>
 
 <p>5、DNS只推荐以下两种，并且不要额外使用mosdns、smartdns诸如此类的插件，如果一定要使用，请务必关掉他们的自动更新（作用是不让他们重启，参考<a href="https://github.com/xiaorouji/openwrt-passwall/issues/2664">https://github.com/xiaorouji/openwrt-passwall/issues/2664</a>）</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720958325-image.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720958341-image.png)</figure>
-<p>6、（可选）自己添加一个Socks节点来达到自动切换的效果，具体步骤参考<a href="https://wp.gxnas.com/13924.html">https://wp.gxnas.com/13924.html</a></p>]]></content><author><name>丝融紫</name></author><category term="Linux" /><summary type="html"><![CDATA[0、重要！！！网络——DHCP/DNS——高级设置——禁止解析 IPv6 DNS 记录（√打钩）]]></summary></entry><entry><title type="html">（661-670）记下我看过的那些日本动漫</title><link href="http://localhost:4000/2024/07/%EF%BC%88661-670%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/" rel="alternate" type="text/html" title="（661-670）记下我看过的那些日本动漫" /><published>2024-07-14T19:06:05+08:00</published><updated>2024-07-14T19:06:05+08:00</updated><id>http://localhost:4000/2024/07/efbc88661-670efbc89e8aeb0e4b88be68891e79c8be8bf87e79a84e982a3e4ba9be697a5e69cace58aa8e6bcab</id><content type="html" xml:base="http://localhost:4000/2024/07/%EF%BC%88661-670%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/"><![CDATA[<p>661、<strong>为美好的世界献上祝福！</strong> 第三季</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720958325-image.png" alt="" /><img src="/assets/wp-content/uploads/2024/07/1720958341-image.png" alt="" />6、（可选）自己添加一个Socks节点来达到自动切换的效果，具体步骤参考<a href="https://wp.gxnas.com/13924.html">https://wp.gxnas.com/13924.html</a></p>]]></content><author><name>丝融紫</name></author><category term="Linux" /><summary type="html"><![CDATA[0、重要！！！网络——DHCP/DNS——高级设置——禁止解析 IPv6 DNS 记录（√打钩）]]></summary></entry><entry><title type="html">（661-670）记下我看过的那些日本动漫</title><link href="http://localhost:4000/2024/07/%EF%BC%88661-670%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/" rel="alternate" type="text/html" title="（661-670）记下我看过的那些日本动漫" /><published>2024-07-14T19:06:05+08:00</published><updated>2024-07-14T19:06:05+08:00</updated><id>http://localhost:4000/2024/07/efbc88661-670efbc89e8aeb0e4b88be68891e79c8be8bf87e79a84e982a3e4ba9be697a5e69cace58aa8e6bcab</id><content type="html" xml:base="http://localhost:4000/2024/07/%EF%BC%88661-670%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/"><![CDATA[<p>661、<strong>为美好的世界献上祝福！</strong> 第三季</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720946528-KonoSuba_17sp.webp)</figure>
-<p>1.阿克西斯教徒只要认真起来，什么都能做到，我们是能做到的人，就算做不好也不怪我们，做不好都怪世界；<br />
-2.面对讨厌的事，只需要逃走就可以了，逃走不是输，而是胜利；<br />
-3.犹豫的时候，不管怎么做都会后悔，反正都会后悔，就选现在比较轻松的办法；<br />
-4.不要害怕老去，神明也不知道未来的你是否快乐，那么就趁现在笑出来吧；<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720946528-KonoSuba_17sp.webp" alt="" />1.阿克西斯教徒只要认真起来，什么都能做到，我们是能做到的人，就算做不好也不怪我们，做不好都怪世界；
+2.面对讨厌的事，只需要逃走就可以了，逃走不是输，而是胜利；
+3.犹豫的时候，不管怎么做都会后悔，反正都会后悔，就选现在比较轻松的办法；
+4.不要害怕老去，神明也不知道未来的你是否快乐，那么就趁现在笑出来吧；
 5.厄里斯的胸是垫出来的。</p>
 
-<p>熟悉的感觉回来了，开心嘛？<br />
-开心就对了。<br />
+<p>熟悉的感觉回来了，开心嘛？
+开心就对了。
 熟悉的ED回来了，《あの日のままのぼくら》，乡村慢摇，百听不厌~!</p>
 
 <p>662、<strong>无职转生 ～到了异世界就拿出真本事～</strong> 第二季下半部分</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720947734-Honeyview_117938071_p0.webp)</figure>
-<p>这是迎娶白妈妈后，救母丧父，顺水推舟又获得蓝妈妈的故事。<br />
-新时代的平家物语，第三季制作决定。<br />
-后面就是迎战龙神，然后在龙大人手下打工的故事啦，わくわく。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720947734-Honeyview_117938071_p0.webp" alt="" />这是迎娶白妈妈后，救母丧父，顺水推舟又获得蓝妈妈的故事。
+新时代的平家物语，第三季制作决定。
+后面就是迎战龙神，然后在龙大人手下打工的故事啦，わくわく。
 还有，洛琪希真可爱www</p>
 <s>来点AI loxy</s>
 
-<figure class="wp-block-gallery has-nested-images columns-default is-cropped wp-block-gallery-2 is-layout-flex wp-block-gallery-is-layout-flex"><figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720948016-Honeyview_120310844_p0.webp)</figure><figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720948016-Honeyview_112034851_p0.webp)</figure></figure>
+<p><img src="/assets/wp-content/uploads/2024/07/1720948016-Honeyview_120310844_p0.webp" alt="" />
+<img src="/assets/wp-content/uploads/2024/07/1720948016-Honeyview_112034851_p0.webp" alt="" /></p>
+
 <p>663、<strong>摇曳露营△</strong> 第三季</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720948246-Honeyview_77733667_p0.webp)</figure>
-<p>全是现实取景然后贴上主角团的2.5次元作画方式。<br />
-还不错捏www<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720948246-Honeyview_77733667_p0.webp" alt="" />全是现实取景然后贴上主角团的2.5次元作画方式。
+还不错捏www
 熟悉的ゆらゆら的感觉回来啦~!</p>
 
 <p>664、<strong>爷爷奶奶返老还童</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720949136-じいさんばあさん若返る.webp)</figure>
-<p>非常有趣的单元剧，我倒感觉没有那么甜，反而是非常家族治愈的那种，比起爱情，他们都更关心孩子们的情况这样。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720949136-じいさんばあさん若返る.webp" alt="" />非常有趣的单元剧，我倒感觉没有那么甜，反而是非常家族治愈的那种，比起爱情，他们都更关心孩子们的情况这样。
 总之就是非常下饭，下饭神番。</p>
 
 <p>665、<strong>夜晚的水母不会游泳</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720949426-Honeyview_117535921_p0.webp)</figure>
-<p>曾创造了一个传奇，曾经是一个传奇。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720949426-Honeyview_117535921_p0.webp" alt="" />曾创造了一个传奇，曾经是一个传奇。
 直到整花活烂了尾……</p>
 
-<p>开创了女团贴贴开vtuber的先河，原创水母娘化角色JELEE很可爱就对了，中间过程很欢乐就对了，对每个角色都有想去塑造的心情，最后莫名其妙来了个非常真实的，明明你晚上不会游泳，明明是我先来的，带着你游了泳，你却中途离开去了大厂单干，只为了更好的前途，<s>那我们之前的默契和贴贴算什么</s>。<br />
-算工业糖浆。<br />
+<p>开创了女团贴贴开vtuber的先河，原创水母娘化角色JELEE很可爱就对了，中间过程很欢乐就对了，对每个角色都有想去塑造的心情，最后莫名其妙来了个非常真实的，明明你晚上不会游泳，明明是我先来的，带着你游了泳，你却中途离开去了大厂单干，只为了更好的前途，<s>那我们之前的默契和贴贴算什么</s>。
+算工业糖浆。
 另外来学两个单词，一个是日语水母——クラゲ，一个是英语水母——Jellyfish。</p>
 <s>我在Jellyfin上看Jellyfish（雾</s>
 <p>剧中曲完全不如历久铭心的高木同学的插曲好听，就《月の温度》和《深海遊泳》勉强可以听一听。</p>
 
 <p>666、<strong>月光下的异世界之旅</strong> 第二幕</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720953306-Honeyview_月が導く異世界道中.webp)</figure>
-<p>非常喜欢的白银厕纸。<br />
-小说也很好看，不过目前后面的剧情有点扯淡就是……<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720953306-Honeyview_月が導く異世界道中.webp" alt="" />非常喜欢的白银厕纸。
+小说也很好看，不过目前后面的剧情有点扯淡就是……
 两首ED都非常好听，配合ED画面非常有魔性，强烈推荐。</p>
 
 <p>667、<strong>转生贵族靠着鉴定技能一飞冲天</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720953712-Honeyview_転生貴族、鑑定スキルで成り上がる.webp)</figure>
-<p>有一丢丢经费的普通厕纸，还算好用。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720953712-Honeyview_転生貴族、鑑定スキルで成り上がる.webp" alt="" />有一丢丢经费的普通厕纸，还算好用。
 简称鉴飞天，内容同标题，收服各路小弟然后称王称霸的故事吧，少有的有黑皮帅哥作为主角团一员的番，虽然全程摸鱼然后被来历不明的酒鬼大姐姐完全优品替代了就是（惨）。</p>
 
 <p>668、<strong>转生为第七王子，随心所欲的魔法学习之路</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720954441-Honeyview_転生したら第七王子.webp)</figure>
-<p>转生七公主，男娘的大大大胜利~!</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720954441-Honeyview_転生したら第七王子.webp" alt="" />转生七公主，男娘的大大大胜利~!</p>
 <s>非常的色气，不是</s>
 <p>制作经费十分充足的黄金厕纸，非常好用，<s>各种方面的</s>，打斗场面异常精彩，光影、粒子特效、人物动作，都可以称之为4月最强啦，虽然它是厕纸，233</p>]]></content><author><name>丝融紫</name></author><category term="日本のアニメの記録記事" /><summary type="html"><![CDATA[661、为美好的世界献上祝福！ 第三季]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/wordpress/wp-content/uploads/2024/07/1720947734-Honeyview_117938071_p0.webp" /><media:content medium="image" url="http://localhost:4000/assets/wordpress/wp-content/uploads/2024/07/1720947734-Honeyview_117938071_p0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">（651-660）记下我看过的那些日本动漫</title><link href="http://localhost:4000/2024/07/%EF%BC%88651-660%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/" rel="alternate" type="text/html" title="（651-660）记下我看过的那些日本动漫" /><published>2024-07-14T16:25:02+08:00</published><updated>2024-07-14T16:25:02+08:00</updated><id>http://localhost:4000/2024/07/efbc88651-660efbc89e8aeb0e4b88be68891e79c8be8bf87e79a84e982a3e4ba9be697a5e69cace58aa8e6bcab</id><content type="html" xml:base="http://localhost:4000/2024/07/%EF%BC%88651-660%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/"><![CDATA[<p>651、<strong>窗边的小豆豆</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720925715-窓ぎわのトットちゃん.jpg)</figure>
-<p>这部电影和宫崎骏的《君たちはどう生きるか》的这部一样，都是作者对自己童年的表达，两人时代也相同，都是出于日本军国主义时期，对外侵略，对内洗脑宣传，美化战争。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720925715-窓ぎわのトットちゃん.jpg" alt="" />这部电影和宫崎骏的《君たちはどう生きるか》的这部一样，都是作者对自己童年的表达，两人时代也相同，都是出于日本军国主义时期，对外侵略，对内洗脑宣传，美化战争。<br />
 宫崎骏家明显更富裕，老爸当时是生产战斗机零部件的，而小豆豆家父亲只是个音乐家，而且不愿意为军人唱自己不喜欢的歌，甚至在这一物资匮乏时期全家因此挨了饿，剧中这些情节也都有表现。<br />
 说到挨饿，现在农业技术发展和物流能力进步的今天，已经几乎不存在因为天气等自然原因挨饿了，如果有，那一定是物资分配或者战略计划等人为导致的饥荒。<br />
 另外回到电影，这部小豆豆还着重表现了教育这一主题，小豆豆是怪孩子吗？如果你是小豆豆的家长、老师，你会怎么做？</p>
 
 <p>652、<strong>你想活出怎样的人生</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720926618-君たちはどう生きるか.jpg)</figure>
-<p>宫崎骏这部比起《窓際のトットちゃん》就抽象得多，每个人有自己的不同理解吧，谈谈我自己的。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720926618-君たちはどう生きるか.jpg" alt="" />宫崎骏这部比起《窓際のトットちゃん》就抽象得多，每个人有自己的不同理解吧，谈谈我自己的。<br />
 宫崎骏是给自己人生，献上爱的祝福。<br />
 想要创造一个没有纷争，谎言，恶行的理想世界，逐渐发现自己也被这染缸浸染。<br />
 最后还是一如既往想要拥抱这个世界。<br />
@@ -231,26 +220,22 @@ F：㉚魔法少女与邪恶曾经敌对、㉛多数欠</p>
 
 <p>653、<strong>新世界之门</strong>（THE NEW GATE）</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720926956-THE-NEW-GATE-1600x900.jpg)</figure>
-<p>制作很穷的普通厕纸，大概是结合骨王和SAO的设定，男主通关最终boss后只有自己没回到现实世界，然后开始装逼的故事。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720926956-THE-NEW-GATE-1600x900.jpg" alt="" />制作很穷的普通厕纸，大概是结合骨王和SAO的设定，男主通关最终boss后只有自己没回到现实世界，然后开始装逼的故事。<br />
 作者的xp我是认可的，制作组也很懂，给了精灵很多戏份，不过最后一集脸都完全画崩了是什么鬼，工期和经费都爆炸了是吧www</p>
 
 <p>654、<strong>从Lv2开始开挂的原勇者候补悠闲的异世界生活</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720927532-Lv2からチートだった元勇者候補のまったり異世界ライフ-1600x900.jpg)</figure>
-<p>制作很穷的普通厕纸，看点是日野聪x钉宫理惠，梦回零之使魔，op也是钉宫疯狂喊旦那樣，剧中人物都是护妻狂魔（不限性别）。</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720927532-Lv2からチートだった元勇者候補のまったり異世界ライフ-1600x900.jpg" alt="" />制作很穷的普通厕纸，看点是日野聪x钉宫理惠，梦回零之使魔，op也是钉宫疯狂喊旦那樣，剧中人物都是护妻狂魔（不限性别）。</p>
 
 <p>655、<strong>格斗实况</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720933357-싸움獨學.webp)</figure>
-<p>最近流行起来的做vtuber类番，这个是韩漫改编，主题是打架。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720933357-싸움獨學.webp" alt="" />最近流行起来的做vtuber类番，这个是韩漫改编，主题是打架。<br />
 可以猎奇一下，观感就是看韩漫的感觉。</p>
 
 <p>656、<strong>怪人的沙拉碗</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720934899-Honeyview_119262688_p0.webp)</figure>
-<s>小鸟哔反穿越精神续作</s>
-<p>我宣布，这就是今年第二喜欢的番，第一是文鸟小哔。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720934899-Honeyview_119262688_p0.webp" alt="" /><s>小鸟哔反穿越精神续作</s><br />
+我宣布，这就是今年第二喜欢的番，第一是文鸟小哔。<br />
 沙拉酱真是太可爱了，怎么可以怎么可爱，好想养一只啊，呜啊啊啊啊~！</p>
 
 <p>经费花在刀刃上，2.5次元的新奇感，比起名字叫2.5次元的的更真实，画画背景也能完爆现实照片贴图的某某露营。<br />
@@ -258,16 +243,14 @@ F：㉚魔法少女与邪恶曾经敌对、㉛多数欠</p>
 
 <p>657、<strong>怪兽8号</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720934917-Honeyview_83029833_p0.webp)</figure>
-<p>前期非常爆笑的番，然后后期……<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720934917-Honeyview_83029833_p0.webp" alt="" />前期非常爆笑的番，然后后期……<br />
 动画没演到那里。</p>
 <s>千万别去追漫画</s>
 <p>话说最近的大叔番也越来越多了，<s>就逮着同一拨人疯狂薅羊毛是吧</s>。</p>
 
 <p>658、<strong>怪物转生</strong>（Re:Monster）</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720935430-Honeyview_Re-Monster.webp)</figure>
-<p>流水账式普通厕纸，因为出生年代非常久远，所以剧情和记叙方式都非常奔放。</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720935430-Honeyview_Re-Monster.webp" alt="" />流水账式普通厕纸，因为出生年代非常久远，所以剧情和记叙方式都非常奔放。</p>
 <s>芙莉莲是勇者死后XX年，这个是XX日目（碰瓷芙莉莲，不是）</s>
 <s>史莱姆是剧情看起来是流水账，这个直接排版就是流水账（碰瓷史莱姆）</s>
 <p>不对，这部明显比这些都更古早啊。<br />
@@ -275,22 +258,18 @@ F：㉚魔法少女与邪恶曾经敌对、㉛多数欠</p>
 
 <p>659、<strong>迷宫饭</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720936304-116556776_p0.png)</figure>
-<p>迷宫饭，要么吃，要么被吃，无关地位高低，一心进食是生者的特权！迷宫饭，啊，迷宫饭！<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720936304-116556776_p0.png" alt="" />迷宫饭，要么吃，要么被吃，无关地位高低，一心进食是生者的特权！迷宫饭，啊，迷宫饭！<br />
 强烈推荐漫画原作，动画也好看的（<s>只是今年已经有芙莉莲了</s>）。<br />
 除了玛露希尔，应该就是森西最讨人喜欢了吧，一个搞笑担当，一个做饭担当。<br />
 没玩过魔兽世界，不过据说本作参考了其中的设定，比如玛露希尔就是典型的摸手法师，法术环放完了只能摸鱼，为了不被队伍开除，<s>于是学会了很多隔壁水神的宴会魔法</s>。</p>
 
 <p>660、<strong>声优广播的台前幕后</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720945252-声優ラジオのウラオモテ.webp)</figure>
-<p>除了剧情还可以，脸是太能挺出去了，全崩了的说。</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720945252-声優ラジオのウラオモテ.webp" alt="" />除了剧情还可以，脸是太能挺出去了，全崩了的说。</p>
 <s>另外本作剧情高度和水濑祈小号事件吻合，绝赞同步放映中</s>
 <p>。</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720945412-Honeyview_GNCX1e6bYAEVoZe.webp)</figure>
-<s>米逆子</s>
-<p>。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720945412-Honeyview_GNCX1e6bYAEVoZe.webp" alt="" /><s>米逆子</s>。<br />
 第四集简直神回。<br />
 哪里有好事和坏事，只有不变和变，只要你想，大概率就会变成好事。</p>]]></content><author><name>丝融紫</name></author><category term="日本のアニメの記録記事" /><summary type="html"><![CDATA[651、窗边的小豆豆]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/wordpress/wp-content/uploads/2024/07/1720934899-Honeyview_119262688_p0.webp" /><media:content medium="image" url="http://localhost:4000/assets/wordpress/wp-content/uploads/2024/07/1720934899-Honeyview_119262688_p0.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">如何让别人感受到快乐，第一步，我的快乐来自哪里</title><link href="http://localhost:4000/2024/06/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%8F%97%E5%88%B0%E5%BF%AB%E4%B9%90%EF%BC%8C%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%AB%E4%B9%90%E6%9D%A5%E8%87%AA%E5%93%AA/" rel="alternate" type="text/html" title="如何让别人感受到快乐，第一步，我的快乐来自哪里" /><published>2024-06-23T15:15:54+08:00</published><updated>2024-06-23T15:15:54+08:00</updated><id>http://localhost:4000/2024/06/e5a682e4bd95e8aea9e588abe4babae6849fe58f97e588b0e5bfabe4b990efbc8ce7acace4b880e6ada5efbc8ce68891e79a84e5bfabe4b990e69da5e887aae593aa</id><content type="html" xml:base="http://localhost:4000/2024/06/%E5%A6%82%E4%BD%95%E8%AE%A9%E5%88%AB%E4%BA%BA%E6%84%9F%E5%8F%97%E5%88%B0%E5%BF%AB%E4%B9%90%EF%BC%8C%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%8C%E6%88%91%E7%9A%84%E5%BF%AB%E4%B9%90%E6%9D%A5%E8%87%AA%E5%93%AA/"><![CDATA[<p>如果想要和别人处好关系，不如先从自己这个样本入手。</p>
 
@@ -410,9 +389,7 @@ F：㉚魔法少女与邪恶曾经敌对、㉛多数欠</p>
 
 <p>……</p>]]></content><author><name>丝融紫</name></author><category term="杂谈" /><summary type="html"><![CDATA[如果想要和别人处好关系，不如先从自己这个样本入手。]]></summary></entry><entry><title type="html">PVE下快速更新OpenWrt固件方法</title><link href="http://localhost:4000/2024/05/pve%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%9B%B4%E6%96%B0openwrt%E5%9B%BA%E4%BB%B6%E6%96%B9%E6%B3%95/" rel="alternate" type="text/html" title="PVE下快速更新OpenWrt固件方法" /><published>2024-05-17T16:48:54+08:00</published><updated>2024-05-17T16:48:54+08:00</updated><id>http://localhost:4000/2024/05/pvee4b88be5bfabe9809fe69bb4e696b0openwrte59bbae4bbb6e696b9e6b395</id><content type="html" xml:base="http://localhost:4000/2024/05/pve%E4%B8%8B%E5%BF%AB%E9%80%9F%E6%9B%B4%E6%96%B0openwrt%E5%9B%BA%E4%BB%B6%E6%96%B9%E6%B3%95/"><![CDATA[<p>1、上传最新的img/iso镜像文件至local(pve)-ISO镜像，去除中文名，只用英文、数字和字符，并拷贝镜像上传地址。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934331-image-1600x730.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/05/1715933866-image.png)</figure>
-<p>2、创建新的虚拟机。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934331-image-1600x730.png" alt="" /><img src="/assets/wp-content/uploads/2024/05/1715933866-image.png" alt="" />2、创建新的虚拟机。</p>
 
 <p>操作系统：选择不使用任何介质<br />
 系统：全部默认<br />
@@ -426,9 +403,9 @@ CPU：核心改为4<br />
 
 <p>101是你刚才创建的虚拟机标签，/var/lib/vz/template/iso/20240510-openwrt-x64-R24.5.1.img是你刚才上传所复制的地址。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934517-image-1600x447.png)</figure>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>qm importdisk 101 /var/lib/vz/template/iso/20240510-openwrt-x64-R24.5.1.img local-lvm
-</code></pre></div></div>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934517-image-1600x447.png" alt="" /><code class="language-plaintext highlighter-rouge">
+qm importdisk 101 /var/lib/vz/template/iso/20240510-openwrt-x64-R24.5.1.img local-lvm
+</code></p>
 
 <p>4、设置虚拟机磁盘和开机启动/引导顺序</p>
 
@@ -437,13 +414,9 @@ CPU：核心改为4<br />
 调整引导顺序，将 sata0 磁盘启用并调整到第一位；<br />
 按顺序添加虚拟网卡，将之前虚拟出来的网卡都依次添加进去，还是使用默认VirtIO模型，第一个添加的网卡将会是WAN口。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934850-image-1600x848.jpg)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934865-image-1600x739.png)</figure>
-<p>5、回到现在的OpenWrt后台地址，生成备份，lucky大吉插件需要单独生成备份。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934850-image-1600x848.jpg" alt="" /><img src="/assets/wp-content/uploads/2024/05/1715934865-image-1600x739.png" alt="" />5、回到现在的OpenWrt后台地址，生成备份，lucky大吉插件需要单独生成备份。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934934-image-1600x1139.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715934981-image-1600x725.png)</figure>
-<p>6、启动新的虚拟机，关闭之前的虚拟机。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715934934-image-1600x1139.png" alt="" /><img src="/assets/wp-content/uploads/2024/05/1715934981-image-1600x725.png" alt="" />6、启动新的虚拟机，关闭之前的虚拟机。</p>
 
 <p>修改电脑地址为新虚拟机的默认ip网段地址，访问新的虚拟机恢复备份；<br />
 恢复备份后重新设置电脑地址为自动获取；<br />
@@ -454,38 +427,31 @@ CPU：核心改为4<br />
 
 <p>PS：若是之前已经有创建好的虚拟机，只需要执行步骤1、3、5、6即可。</p>]]></content><author><name>丝融紫</name></author><category term="Linux" /><category term="杂谈" /><summary type="html"><![CDATA[1、上传最新的img/iso镜像文件至local(pve)-ISO镜像，去除中文名，只用英文、数字和字符，并拷贝镜像上传地址。]]></summary></entry><entry><title type="html">OpenWrt桥接后访问光猫方法</title><link href="http://localhost:4000/2024/05/openwrt%E6%A1%A5%E6%8E%A5%E5%90%8E%E8%AE%BF%E9%97%AE%E5%85%89%E7%8C%AB%E6%96%B9%E6%B3%95/" rel="alternate" type="text/html" title="OpenWrt桥接后访问光猫方法" /><published>2024-05-17T16:13:15+08:00</published><updated>2024-05-17T16:13:15+08:00</updated><id>http://localhost:4000/2024/05/openwrte6a1a5e68ea5e5908ee8aebfe997aee58589e78cabe696b9e6b395</id><content type="html" xml:base="http://localhost:4000/2024/05/openwrt%E6%A1%A5%E6%8E%A5%E5%90%8E%E8%AE%BF%E9%97%AE%E5%85%89%E7%8C%AB%E6%96%B9%E6%B3%95/"><![CDATA[<p>1、网络-接口，找到WAN（pppoe-wan），修改-高级设置-使用网关跃点，修改为较小数值，比如1。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715932994-QQ截图20240517160244-1600x1205.jpg)</figure>
-<p>2、添加一个新接口，命名随意，比如命名为MAO（光猫的意思）</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715932994-QQ截图20240517160244-1600x1205.jpg" alt="" />2、添加一个新接口，命名随意，比如命名为MAO（光猫的意思）</p>
 
 <p>协议选“静态地址”，包括以下接口这里绑定WAN口，我这里是eth1，“以太网适配器: “eth1” (<a href="http://192.168.2.1/cgi-bin/luci/admin/network/network/wan">wan</a>, <a href="http://192.168.2.1/cgi-bin/luci/admin/network/network/wan6">wan6</a>)”</p>
 
 <p>IPv4 地址随便填一个光猫所在ip段的，我的光猫是192.168.1.1，我这里就填的192.168.1.2，IPv4 网关填光猫地址192.168.1.1。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715933112-image-1600x1176.png)</figure>
-<p>3、修改刚刚设置好的接口网关跃点为较大值（代表MAO的优先级低于WAN），比如我这里是60。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715933112-image-1600x1176.png" alt="" />3、修改刚刚设置好的接口网关跃点为较大值（代表MAO的优先级低于WAN），比如我这里是60。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715933415-image-1600x1017.png)</figure>
-<p>4、保存更改，便可以直接访问光猫地址了。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715933415-image-1600x1017.png" alt="" />4、保存更改，便可以直接访问光猫地址了。</p>
 
 <p><strong>24/07/07更新 方法二</strong></p>
 
 <p>1、新建一个防火墙区域，取名<strong>modem</strong>，设置如下</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720349038-image-1600x280.png)</figure>
-<p>2、添加一个新接口，同上一样，不用设置网关跃点，只是防火墙区域选择刚才创建的modem，若创建后无法上网，重启openwrt即可。</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720349038-image-1600x280.png" alt="" />2、添加一个新接口，同上一样，不用设置网关跃点，只是防火墙区域选择刚才创建的modem，若创建后无法上网，重启openwrt即可。</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720349244-image.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720349255-image.png)</figure>]]></content><author><name>丝融紫</name></author><category term="Linux" /><category term="杂谈" /><summary type="html"><![CDATA[1、网络-接口，找到WAN（pppoe-wan），修改-高级设置-使用网关跃点，修改为较小数值，比如1。]]></summary></entry><entry><title type="html">（641-650）记下我看过的那些日本动漫</title><link href="http://localhost:4000/2024/05/%EF%BC%88641-650%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/" rel="alternate" type="text/html" title="（641-650）记下我看过的那些日本动漫" /><published>2024-05-17T15:36:21+08:00</published><updated>2024-05-17T15:36:21+08:00</updated><id>http://localhost:4000/2024/05/efbc88641-650efbc89e8aeb0e4b88be68891e79c8be8bf87e79a84e982a3e4ba9be697a5e69cace58aa8e6bcab</id><content type="html" xml:base="http://localhost:4000/2024/05/%EF%BC%88641-650%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/"><![CDATA[<p>641、<strong>香格里拉边境～粪作猎人向神作游戏发起挑战～</strong></p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720349244-image.png" alt="" /><img src="/assets/wp-content/uploads/2024/07/1720349255-image.png" alt="" /></p>]]></content><author><name>丝融紫</name></author><category term="Linux" /><category term="杂谈" /><summary type="html"><![CDATA[1、网络-接口，找到WAN（pppoe-wan），修改-高级设置-使用网关跃点，修改为较小数值，比如1。]]></summary></entry><entry><title type="html">（641-650）记下我看过的那些日本动漫</title><link href="http://localhost:4000/2024/05/%EF%BC%88641-650%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/" rel="alternate" type="text/html" title="（641-650）记下我看过的那些日本动漫" /><published>2024-05-17T15:36:21+08:00</published><updated>2024-05-17T15:36:21+08:00</updated><id>http://localhost:4000/2024/05/efbc88641-650efbc89e8aeb0e4b88be68891e79c8be8bf87e79a84e982a3e4ba9be697a5e69cace58aa8e6bcab</id><content type="html" xml:base="http://localhost:4000/2024/05/%EF%BC%88641-650%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/"><![CDATA[<p>641、<strong>香格里拉边境～粪作猎人向神作游戏发起挑战～</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/04/1712257778-Honeyview_114228967_p0-1131x1600.webp)</figure>
-<p>每集掐头去尾只有10分钟的网游番，最后两集甚至没有主线好讲然后开始水小故事，不过也挺好看就是。<br />
+<p><img src="/assets/wp-content/uploads/2024/04/1712257778-Honeyview_114228967_p0-1131x1600.webp" alt="" />每集掐头去尾只有10分钟的网游番，最后两集甚至没有主线好讲然后开始水小故事，不过也挺好看就是。<br />
 本作是属于真的有好好在讲玩网游的类型，虽然穿插了单相思剧情，不过侧重点还是在战斗方面。<br />
 另外本作男主和真女主(兔子)的声优在档期宣布结婚，果然兔子才是女主。</p>
 
 <p>642、<strong>魔都精兵的奴隶</strong></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/04/1712258702-115915294_p0.jpg)</figure>
-<p>同类(色色)赛道本来无敌的番，可惜隔壁钻出个魔法少女。<br />
+<p><img src="/assets/wp-content/uploads/2024/04/1712258702-115915294_p0.jpg" alt="" />同类(色色)赛道本来无敌的番，可惜隔壁钻出个魔法少女。<br />
 就单纯的战斗番来说，战斗不够精彩；<br />
 就单纯的剧情番来说，剧情不够独特；<br />
 就单纯的色色番来说，色色不够刺激。<br />
@@ -493,21 +459,18 @@ CPU：核心改为4<br />
 
 <p>643、<strong>BUCCHIGIRI？！</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/04/1712259211-Honeyview_116684146_p0-956x1600.webp)</figure>
-<p>作为MAPPA制作的原创动画，打斗方面没的说，就是这个剧情嘛，说它热血吧，它很怂逼；说它恋爱吧，它单相思；说它复仇吧，它还没开始。<br />
+<p><img src="/assets/wp-content/uploads/2024/04/1712259211-Honeyview_116684146_p0-956x1600.webp" alt="" />作为MAPPA制作的原创动画，打斗方面没的说，就是这个剧情嘛，说它热血吧，它很怂逼；说它恋爱吧，它单相思；说它复仇吧，它还没开始。<br />
 整个就很恶心人啊。<br />
 也就ED摇可以一听。</p>
 
 <p>644、<strong>蓝色管弦乐</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715926925-91985643_p0-1200x1600.jpg)</figure>
-<p>中规中矩的青春励志番。抛开动画作画不谈，剧情方面还是十分经得起打磨的。<br />
+<p><img src="/assets/wp-content/uploads/2024/05/1715926925-91985643_p0-1200x1600.jpg" alt="" />中规中矩的青春励志番。抛开动画作画不谈，剧情方面还是十分经得起打磨的。<br />
 从解开少男少女因为家庭、学校的因素，从而继续前进，到不断遇到新的挑战和问题，青野一行人也在不断成长，终于知道了，自己就是有小提琴的天赋，自己就是喜欢拉小提琴，不管爸爸是怎样的烂人，不用在意他人的评价，做自己喜欢的事、尤其还是擅长的事，开心加倍好么www</p>
 
 <p>645、<strong>魔女与野兽</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715927944-Honeyview_98200208_p0-1200x1600.webp)</figure>
-<p>比较类似接吻变身的设定，<br />
+<p><img src="/assets/wp-content/uploads/2024/05/1715927944-Honeyview_98200208_p0-1200x1600.webp" alt="" />比较类似接吻变身的设定，<br />
 女作者写的故事就是不一样，<br />
 全过程搞百合，<br />
 还是个单元剧解谜战斗番。<br />
@@ -515,28 +478,24 @@ CPU：核心改为4<br />
 
 <p>646、<strong>婚戒物语</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715928473-117338577_p0-1282x1600.jpg)</figure>
-<p>这个指环王简直铁畜生啊，战斗经费一点没有，色色全是圣光，到了关键时候就临阵缩枪。<br />
+<p><img src="/assets/wp-content/uploads/2024/05/1715928473-117338577_p0-1282x1600.jpg" alt="" />这个指环王简直铁畜生啊，战斗经费一点没有，色色全是圣光，到了关键时候就临阵缩枪。<br />
 可弃。</p>
 
 <p>647、<strong>伊甸星原</strong> 第二季</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/05/1715929574-85178820_p0.jpg)</figure>
-<p>热血少年漫，一句话总结——<br />
+<p><img src="/assets/wp-content/uploads/2024/05/1715929574-85178820_p0.jpg" alt="" />热血少年漫，一句话总结——<br />
 这次是击败德拉肯·乔以及寻找mother的过程中发现爷爷吉基“叛变”后展开的“拯救”行动。</p>
 
 <p>648、<strong>异修罗</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715930370-85875803_p0-1600x1132.jpg)</figure>
-<p>此番又名——《电子斗蛐蛐》<br />
+<p><img src="/assets/wp-content/uploads/2024/05/1715930370-85875803_p0-1600x1132.jpg" alt="" />此番又名——《电子斗蛐蛐》<br />
 异世界大乱斗，每集介绍1-2位角色，声优阵容豪华。<br />
 然后大乱斗还没开始就结束了（x<br />
 其实观感还可以，可惜原作是小说，这种不太能看得下去，漫画倒是可以追一追。</p>
 
 <p>649、<strong>忍者神威</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720923693-Ninja-Kamui-1600x900.jpg)</figure>
-<p>女人们都死了，男人们都活了下来的忍者x科幻的特效战斗番。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720923693-Ninja-Kamui-1600x900.jpg" alt="" />女人们都死了，男人们都活了下来的忍者x科幻的特效战斗番。<br />
 从肉搏到机战，233<br />
 美国人喜欢的日本忍者的样子。<br />
 结合了高科技打斗以及好莱坞常见的遇事不决拯救世界的个人英雄主义。<br />
@@ -545,57 +504,56 @@ CPU：核心改为4<br />
 
 <p>650、<strong>轮回七次的恶役千金，在前敌国享受随心所欲的新婚生活</strong></p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720924027-650、轮回七次的恶役千金，在前敌国享受随心所欲的新婚生活-1600x900.jpg)</figure>
-<p>经典起点女频男女通吃套路文，大概思路就是，女主很强，女主不屑于结婚，但是冷酷好男人好像暗恋我，ドキドキ。<br />
+<p><img src="/assets/wp-content/uploads/2024/07/1720924027-650、轮回七次的恶役千金，在前敌国享受随心所欲的新婚生活-1600x900.jpg" alt="" />经典起点女频男女通吃套路文，大概思路就是，女主很强，女主不屑于结婚，但是冷酷好男人好像暗恋我，ドキドキ。<br />
 虽是套路，但是拍成动漫还是非常好看的（参考中国最近的玄幻、仙侠小说改编电视剧），推荐喵www</p>]]></content><author><name>丝融紫</name></author><category term="日本のアニメの記録記事" /><summary type="html"><![CDATA[641、香格里拉边境～粪作猎人向神作游戏发起挑战～]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/wordpress/wp-content/uploads/2024/07/1720924027-650%E3%80%81%E8%BD%AE%E5%9B%9E%E4%B8%83%E6%AC%A1%E7%9A%84%E6%81%B6%E5%BD%B9%E5%8D%83%E9%87%91%EF%BC%8C%E5%9C%A8%E5%89%8D%E6%95%8C%E5%9B%BD%E4%BA%AB%E5%8F%97%E9%9A%8F%E5%BF%83%E6%89%80%E6%AC%B2%E7%9A%84%E6%96%B0%E5%A9%9A%E7%94%9F%E6%B4%BB.jpg" /><media:content medium="image" url="http://localhost:4000/assets/wordpress/wp-content/uploads/2024/07/1720924027-650%E3%80%81%E8%BD%AE%E5%9B%9E%E4%B8%83%E6%AC%A1%E7%9A%84%E6%81%B6%E5%BD%B9%E5%8D%83%E9%87%91%EF%BC%8C%E5%9C%A8%E5%89%8D%E6%95%8C%E5%9B%BD%E4%BA%AB%E5%8F%97%E9%9A%8F%E5%BF%83%E6%89%80%E6%AC%B2%E7%9A%84%E6%96%B0%E5%A9%9A%E7%94%9F%E6%B4%BB.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">2024年4月新番快评</title><link href="http://localhost:4000/2024/04/2024%E5%B9%B44%E6%9C%88%E6%96%B0%E7%95%AA%E5%BF%AB%E8%AF%84/" rel="alternate" type="text/html" title="2024年4月新番快评" /><published>2024-04-17T00:00:11+08:00</published><updated>2024-04-17T00:00:11+08:00</updated><id>http://localhost:4000/2024/04/2024e5b9b44e69c88e696b0e795aae5bfabe8af84</id><content type="html" xml:base="http://localhost:4000/2024/04/2024%E5%B9%B44%E6%9C%88%E6%96%B0%E7%95%AA%E5%BF%AB%E8%AF%84/"><![CDATA[<figure class="wp-block-embed is-type-rich is-provider-twitter wp-block-embed-twitter"><div class="wp-block-embed__wrapper">&gt; 四月好看的新番不少，续作也是扎堆轰炸。这次评级就不纳入续作了。  
 &gt; 新作部分——  
 &gt; s级，这季度没有上上季度芙莉莲，猫猫，16bit这种开篇让人眼前一亮的作品，虽然16bit高开低走，但是监督这种什么都想装的想法很戳我xp，我内心还是把16bit当做去年的最佳原创的。（没错，虽然是漫改，但是近乎是原创了） [pic.twitter.com/HRbRdzCsJZ](https://t.co/HRbRdzCsJZ)
 &gt; 
 &gt; — 稲葉御飯 (@sirongzi) [April 16, 2024](https://twitter.com/sirongzi/status/1780275879022883203?ref_src=twsrc%5Etfw)
 
-<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></div></figure>
-<p>四月好看的新番不少，续作也是扎堆轰炸。这次评级就不纳入以前的续作了。<br />
-新作部分——<br />
-s级，这季度没有上上季度芙莉莲，猫猫，16bit这种开篇让人眼前一亮的老少皆宜的作品，虽然16bit高开低走，但是监督这种什么都想装的想法很戳我xp，我内心还是把16bit当做去年的最佳原创的。（没错，虽然是漫改，但是近乎是原创了）</p>
+<script async="" charset="utf-8" src="https://platform.twitter.com/widgets.js"></script></div>四月好看的新番不少，续作也是扎堆轰炸。这次评级就不纳入以前的续作了。  
+新作部分——  
+s级，这季度没有上上季度芙莉莲，猫猫，16bit这种开篇让人眼前一亮的老少皆宜的作品，虽然16bit高开低走，但是监督这种什么都想装的想法很戳我xp，我内心还是把16bit当做去年的最佳原创的。（没错，虽然是漫改，但是近乎是原创了）
 
-<p>扯远了，1月没有s级让人眼前一亮的作品。<br />
-AA级私心推荐（黄金厕纸展览馆）——<br />
-①沙拉碗：小鸟哔的反穿越精神续作（同作者），社会人看了都说好。<br />
-②七王子：画女硬说男，战斗场面干净利索，叙事流畅侧重有度，开心就完事儿了。<br />
-③鉴飞天：同上黄金厕纸，唯一区别是上面无双，下面种田。<br />
-④从零开始的哥布林生活：黄金厕纸，也是种田。</p>
+扯远了，1月没有s级让人眼前一亮的作品。  
+AA级私心推荐（黄金厕纸展览馆）——  
+①沙拉碗：小鸟哔的反穿越精神续作（同作者），社会人看了都说好。  
+②七王子：画女硬说男，战斗场面干净利索，叙事流畅侧重有度，开心就完事儿了。  
+③鉴飞天：同上黄金厕纸，唯一区别是上面无双，下面种田。  
+④从零开始的哥布林生活：黄金厕纸，也是种田。
 
-<p>A级（既定领域精品）少女界——<br />
-①jellyfish：扭曲界发福利的神。这季度GBC和邦邦一样，3D把我劝退。<br />
-②声优广播：二人转的神，同样扭曲。<br />
-③终末列车：列车界（x划掉，末日废土少女贴贴旅行界的神，喜欢的会非常喜欢。<br />
-④恋语轻唱：柑橘味界的神，如果说普通贴贴是伪百合，那这是真百合。<br />
-⑤怪异/少女/神隐：阴阳界的神，不那么恐怖，反倒有一丝兴奋，也有一丝凄凉。</p>
+A级（既定领域精品）少女界——  
+①jellyfish：扭曲界发福利的神。这季度GBC和邦邦一样，3D把我劝退。  
+②声优广播：二人转的神，同样扭曲。  
+③终末列车：列车界（x划掉，末日废土少女贴贴旅行界的神，喜欢的会非常喜欢。  
+④恋语轻唱：柑橘味界的神，如果说普通贴贴是伪百合，那这是真百合。  
+⑤怪异/少女/神隐：阴阳界的神，不那么恐怖，反倒有一丝兴奋，也有一丝凄凉。
 
-<p>非少女界：<br />
-⑥怪兽8号：链锯人界的神，又一个不当人更强的。<br />
-⑦失忆投捕：一周的朋友界的神，这次不谈恋爱，搞基（x划掉，谈爱好搞运动了。<br />
-⑧返老还童：南家三姐妹界的神，比起发糖，更侧重发笑。<br />
-⑨神之杯：调酒师界……的神，那个摇酒的声音可以当ASMR听了。<br />
-⑩防风铃：火炮兰界的神（x，不良界的神，这次不当不良了。<br />
-⑪杀手寓言：间谍过家家界的神，这次是黑道x喜剧的过家家。</p>
+非少女界：  
+⑥怪兽8号：链锯人界的神，又一个不当人更强的。  
+⑦失忆投捕：一周的朋友界的神，这次不谈恋爱，搞基（x划掉，谈爱好搞运动了。  
+⑧返老还童：南家三姐妹界的神，比起发糖，更侧重发笑。  
+⑨神之杯：调酒师界……的神，那个摇酒的声音可以当ASMR听了。  
+⑩防风铃：火炮兰界的神（x，不良界的神，这次不当不良了。  
+⑪杀手寓言：间谍过家家界的神，这次是黑道x喜剧的过家家。
 
-<p>B级（有特色）——</p>
+B级（有特色）——
 
-<p>①THE NEW GATE：好用的厕纸，关于刀剑主角通关后陷入骨王剧情的那件事。<br />
-②单间天使：现在是宅宅幻想福利时间。<br />
-③无名记忆：比起异世界，更偏向于纯爱。<br />
-④格斗实况：打架youtuber的养成之路。</p>
+①THE NEW GATE：好用的厕纸，关于刀剑主角通关后陷入骨王剧情的那件事。  
+②单间天使：现在是宅宅幻想福利时间。  
+③无名记忆：比起异世界，更偏向于纯爱。  
+④格斗实况：打架youtuber的养成之路。
 
-<p>C级（尚能一看）——</p>
+C级（尚能一看）——
 
-<p>①Lv2：兄弟，你好香啊。（没有变成女的开始后续剧情我不认可，另外，这是怀旧版的零之使魔么。<br />
-②夜樱家：大舅子太凶了怎么办，在线等。<br />
-③神渴望着游戏：我没有开挂，只是女神陪我玩游戏。<br />
-④奴隶精灵：这部番，加一点穷，再加一点尬，再加亿点尬。（没有吐槽役是这样的<br />
-另外没有提到的，诸如GBC、外星笔记、花野井君与相思病、竞轮少女，问就是没看，或者看了没兴趣。</p>
+①Lv2：兄弟，你好香啊。（没有变成女的开始后续剧情我不认可，另外，这是怀旧版的零之使魔么。  
+②夜樱家：大舅子太凶了怎么办，在线等。  
+③神渴望着游戏：我没有开挂，只是女神陪我玩游戏。  
+④奴隶精灵：这部番，加一点穷，再加一点尬，再加亿点尬。（没有吐槽役是这样的  
+另外没有提到的，诸如GBC、外星笔记、花野井君与相思病、竞轮少女，问就是没看，或者看了没兴趣。
 
-<p>续作部分，强推——无职转生、美好世界（konosuba，无职作者都说好）、摇曳露营、上低音号、贤狼赫萝，喜欢厕纸的，萌王史莱姆、魔科劣等生都可以看，另外情怀向约会大作战也出第五季了，其他就不介绍了，喜欢的自己都会去追哒。</p>]]></content><author><name>丝融紫</name></author><category term="杂谈" /><summary type="html"><![CDATA[&gt; 四月好看的新番不少，续作也是扎堆轰炸。这次评级就不纳入续作了。 &gt; 新作部分—— &gt; s级，这季度没有上上季度芙莉莲，猫猫，16bit这种开篇让人眼前一亮的作品，虽然16bit高开低走，但是监督这种什么都想装的想法很戳我xp，我内心还是把16bit当做去年的最佳原创的。（没错，虽然是漫改，但是近乎是原创了） [pic.twitter.com/HRbRdzCsJZ](https://t.co/HRbRdzCsJZ) &gt; &gt; — 稲葉御飯 (@sirongzi) [April 16, 2024](https://twitter.com/sirongzi/status/1780275879022883203?ref_src=twsrc%5Etfw)]]></summary></entry><entry><title type="html">群晖docker容器版emby添加弹弹play弹幕</title><link href="http://localhost:4000/2024/04/%E7%BE%A4%E6%99%96docker%E5%AE%B9%E5%99%A8%E7%89%88emby%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%BC%B9play%E5%BC%B9%E5%B9%95/" rel="alternate" type="text/html" title="群晖docker容器版emby添加弹弹play弹幕" /><published>2024-04-08T13:46:54+08:00</published><updated>2024-04-08T13:46:54+08:00</updated><id>http://localhost:4000/2024/04/e7bea4e69996dockere5aeb9e599a8e78988embye6b7bbe58aa0e5bcb9e5bcb9playe5bcb9e5b995</id><content type="html" xml:base="http://localhost:4000/2024/04/%E7%BE%A4%E6%99%96docker%E5%AE%B9%E5%99%A8%E7%89%88emby%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%BC%B9play%E5%BC%B9%E5%B9%95/"><![CDATA[<p>服务器端添加代码，可以实现web端弹幕播放，使用ssh的话可以用以下代码</p>
+续作部分，强推——无职转生、美好世界（konosuba，无职作者都说好）、摇曳露营、上低音号、贤狼赫萝，喜欢厕纸的，萌王史莱姆、魔科劣等生都可以看，另外情怀向约会大作战也出第五季了，其他就不介绍了，喜欢的自己都会去追哒。
+</figure>]]></content><author><name>丝融紫</name></author><category term="杂谈" /><summary type="html"><![CDATA[&gt; 四月好看的新番不少，续作也是扎堆轰炸。这次评级就不纳入续作了。 &gt; 新作部分—— &gt; s级，这季度没有上上季度芙莉莲，猫猫，16bit这种开篇让人眼前一亮的作品，虽然16bit高开低走，但是监督这种什么都想装的想法很戳我xp，我内心还是把16bit当做去年的最佳原创的。（没错，虽然是漫改，但是近乎是原创了） [pic.twitter.com/HRbRdzCsJZ](https://t.co/HRbRdzCsJZ) &gt; &gt; — 稲葉御飯 (@sirongzi) [April 16, 2024](https://twitter.com/sirongzi/status/1780275879022883203?ref_src=twsrc%5Etfw)]]></summary></entry><entry><title type="html">群晖docker容器版emby添加弹弹play弹幕</title><link href="http://localhost:4000/2024/04/%E7%BE%A4%E6%99%96docker%E5%AE%B9%E5%99%A8%E7%89%88emby%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%BC%B9play%E5%BC%B9%E5%B9%95/" rel="alternate" type="text/html" title="群晖docker容器版emby添加弹弹play弹幕" /><published>2024-04-08T13:46:54+08:00</published><updated>2024-04-08T13:46:54+08:00</updated><id>http://localhost:4000/2024/04/e7bea4e69996dockere5aeb9e599a8e78988embye6b7bbe58aa0e5bcb9e5bcb9playe5bcb9e5b995</id><content type="html" xml:base="http://localhost:4000/2024/04/%E7%BE%A4%E6%99%96docker%E5%AE%B9%E5%99%A8%E7%89%88emby%E6%B7%BB%E5%8A%A0%E5%BC%B9%E5%BC%B9play%E5%BC%B9%E5%B9%95/"><![CDATA[<p>服务器端添加代码，可以实现web端弹幕播放，使用ssh的话可以用以下代码</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps -a //查看容器id
 docker exec -it emby容器id /bin/bash  //进入容器

@@ -119,9 +119,35 @@
 <meta property="og:site_name" content="丝丝的小窝">
 <meta property="og:description" content="踩了不少坑，记录一下最后各个设置参数和避雷手段，希望能帮到大家。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-1.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-2.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-3-1600x976.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-4.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-5.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-6.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-7-906x1024.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-8-971x1024.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-9.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-10.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-11.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-19-1600x570.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-12.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-13.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-14.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-18.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-20-1600x767.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-24-1600x619.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-15-1600x332.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-16.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-17.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-21.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-22.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-23.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="家庭网络布局之群晖虚拟机安装OpenWrt作旁路由">
 <meta name="twitter:description" content="踩了不少坑，记录一下最后各个设置参数和避雷手段，希望能帮到大家。">
+<meta name="twitter:image" content="/assets/wp-content/uploads/2022/08/image-1.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -493,25 +519,18 @@
 
 <p>首先，我家里的网络布局如图所示，<strong>只有IPV4</strong>——</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-1.png)</figure>
-<p>来说下为啥这样做，首先入户盒子小，想平时关闭盒子保持大厅的整洁美观，即不想放在外面还摆个凳子、桌子放一堆路由器、NAS啥的。<br />
+<p><img src="/assets/wp-content/uploads/2022/08/image-1.png" alt="" />来说下为啥这样做，首先入户盒子小，想平时关闭盒子保持大厅的整洁美观，即不想放在外面还摆个凳子、桌子放一堆路由器、NAS啥的。<br />
 光猫性能较弱，能桥接就尽量桥接，让自己的路由器拨号，而且光猫如果关闭DHCP万一出了问题很难登陆处理（特别我这种始终保持光猫wifi关闭的选手），所以我是光猫直接一个网段192.168.1.1，然后桥接到路由器复制拨号，网段另设为192.168.2.1（第三位随便2-255的数字都可以）。<br />
 路由器性能仍较弱，无法满载挂酸酸乳Clash之类的，所以需要用到软路由，但是软路由又多一个设备和跳线，性价比和美观实用方面完全不如群晖NAS做虚拟旁路由。（NAS单线即可）</p>
 
 <p>首先群晖安装VMM，设置网络打开Open vSwitch功能。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image.png)</figure>
-<p>下载OpenWrt固件，群晖是<strong>amd64</strong>或者<strong>x86_64</strong>，我这次找到的这里下载，推荐直接Plus版，<a href="https://openwrt.mpdn.fun:8443/?dir=lede%2Fx86_64">https://openwrt.mpdn.fun:8443/?dir=lede%2Fx86_64</a><br />
+<p><img src="/assets/wp-content/uploads/2022/08/image.png" alt="" />下载OpenWrt固件，群晖是<strong>amd64</strong>或者<strong>x86_64</strong>，我这次找到的这里下载，推荐直接Plus版，<a href="https://openwrt.mpdn.fun:8443/?dir=lede%2Fx86_64">https://openwrt.mpdn.fun:8443/?dir=lede%2Fx86_64</a><br />
 下载好后，在群辉VMM里面，映像——硬盘映像（导入）——虚拟机（新增往下拉有个“导入”）</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-2.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-3-1600x976.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/08/image-4.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-5.png)</figure>
-<p>用户电源管理也不用打钩，直接安装后启动——连接——当屏幕打印如下图所示信息，按<strong>回车键</strong>。</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-2.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-3-1600x976.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-4.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-5.png" alt="" />用户电源管理也不用打钩，直接安装后启动——连接——当屏幕打印如下图所示信息，按<strong>回车键</strong>。</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/08/image-6.png)</figure>
-<p>运行命令修改网络配置：</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-6.png" alt="" />运行命令修改网络配置：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>vi /etc/config/network
 </code></pre></td></tr></tbody></table></div></div>
@@ -547,11 +566,7 @@
 
 <p>修改网关、DNS为主路由ip、关闭DHCP、关闭ipV6、取消桥接（如果不能上网再——添加防火墙规则）</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-7-906x1024.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-8-971x1024.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-9.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-10.png)</figure>
-<p>到这里，如果你已经能上网，那么恭喜你，端口转发相关的设置你就只需要在主路由进行设置即可！<br />
+<p><img src="/assets/wp-content/uploads/2022/08/image-7-906x1024.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-8-971x1024.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-9.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-10.png" alt="" />到这里，如果你已经能上网，那么恭喜你，端口转发相关的设置你就只需要在主路由进行设置即可！<br />
 如果不能，试着在防火墙自定义规则下添加如下句段——</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE
@@ -567,29 +582,21 @@
 所以个人总结，先不加规则，如果网络能通，恭喜你，最佳性能。如果必须加规则网络才能通，那么勉强用着吧，所有流量都要经过旁路由，非最佳。<br />
 个人网上看到的一些情况，本人也是一知半解，说错也不复杂，不要喷我。”</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-11.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-19-1600x570.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-12.png)</figure>
-<p>登陆主路由设置网关和DNS为虚拟机（即OpenWrt）地址，以我的华硕路由器为例——</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-11.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-19-1600x570.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-12.png" alt="" />登陆主路由设置网关和DNS为虚拟机（即OpenWrt）地址，以我的华硕路由器为例——</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-13.png)</figure>
-<p>登陆群晖，重新设置网关和DNS（有强迫症可以设置完后再自动获取一下也可以）——</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-13.png" alt="" />登陆群晖，重新设置网关和DNS（有强迫症可以设置完后再自动获取一下也可以）——</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-14.png)</figure>
-<p>至此就设置完成，顺利的话用手机连一下wifi点下详细信息就可以看到网关变成了192.168.2.2，DNS服务器则是192.168.2.2/192.168.2.1两个。</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-14.png" alt="" />至此就设置完成，顺利的话用手机连一下wifi点下详细信息就可以看到网关变成了192.168.2.2，DNS服务器则是192.168.2.2/192.168.2.1两个。</p>
 
 <p>另外再补充一下加入了那句话两层nat后，具体如何进行端口转发，以及这种情况下群晖创建SMTP服务无法发信或者无法收信的解决方法（想了3个晚上，试了很多方案最后终于成功了，呜呜呜），直接上图吧——</p>
 
 <p>主路由：（均指向OpenWrt地址）</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-18.png)</figure>
-<p>虚拟路由：</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-18.png" alt="" />虚拟路由：</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-20-1600x767.png)</figure>
-<p>DNS解析：</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-20-1600x767.png" alt="" />DNS解析：</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-24-1600x619.png)</figure>
-<p>群晖的域和主机名（FQDN）都直接填sirongzi.xyz的原始域名，你的发件人也是xxx@sirongzi.xyz这样。</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-24-1600x619.png" alt="" />群晖的域和主机名（FQDN）都直接填sirongzi.xyz的原始域名，你的发件人也是xxx@sirongzi.xyz这样。</p>
 
 <p>——————————————————</p>
 
@@ -601,8 +608,7 @@ TUN模式内核<a href="https://github.com/vernesong/OpenClash/releases/tag/TUN-
 
 <p>请解压后确认名称为Clash（无后缀名）再上传，上传位置（不好找……）</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-15-1600x332.png)</figure>
-<p>会提示文件已成功上传到 “/etc/openclash/core/”，进群晖VMM点连接，按enter进入命令模式</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-15-1600x332.png" alt="" />会提示文件已成功上传到 “/etc/openclash/core/”，进群晖VMM点连接，按enter进入命令模式</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code>cd /etc/openclash/core/
 chmod 777 clash
@@ -610,34 +616,26 @@ chmod 777 clash
 
 <p>如果传错了可以这样删除——</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-16.png)</figure>
-<p>TUN的也一样（也是命名为Clash上传，会自动识别的，但是上传的时候记得选TUN）——</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-16.png" alt="" />TUN的也一样（也是命名为Clash上传，会自动识别的，但是上传的时候记得选TUN）——</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-17.png)</figure>
-<p>另外，订阅地址不是ssr订阅地址，可以直接用Clash托管链接很方便。</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-17.png" alt="" />另外，订阅地址不是ssr订阅地址，可以直接用Clash托管链接很方便。</p>
 
 <p>其他具体设置就各凭喜好了，下面给出本人的推荐，马上用手机连wifi试试效果吧~</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-21.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/08/image-22.png)<figcaption>这个推荐开启</figcaption></figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/08/image-23.png)<figcaption>加的两台电脑</figcaption></figure>
-<p>——————————————————————————————————————————</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-21.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-22.png" alt="" />&lt;figcaption&gt;这个推荐开启&lt;/figcaption&gt;<img src="/assets/wp-content/uploads/2022/08/image-23.png" alt="" />&lt;figcaption&gt;加的两台电脑&lt;/figcaption&gt;——————————————————————————————————————————</p>
 
 <p>这里再给出一种你OpenClash配置好后只使用一层NAT不伪装IP，而通过OpenClash实现伪装IP顺利上网的方法：</p>
 
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2022/08/image-25.png)</figure>
-<p>同时防火墙删掉那句伪装IP的话<s>iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE</s></p>
+<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2022/08/image-25.png)同时防火墙删掉那句伪装IP的话<s>iptables -t nat -I POSTROUTING -o eth0 -j MASQUERADE</s>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/08/image-26.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-27.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/08/image-28.png)</figure>
-<p>然后在主路由进行端口转发直接转到目标地址如NAS之类的，好处：看似只用一次转发，坏处：OpenClash挂了或者配置文件/远程服务器有问题就直接全家断网。<br />
-所以，不推荐，不如上面两层NAT，就端口转发需要设置两次比较麻烦，当然你路由器直接不加那句话能上网就是无敌的，比如N1、AX86U（都是网上看到的，不一定保证可以）之类的。</p>
+![](/assets/wp-content/uploads/2022/08/image-26.png)![](/assets/wp-content/uploads/2022/08/image-27.png)![](/assets/wp-content/uploads/2022/08/image-28.png)然后在主路由进行端口转发直接转到目标地址如NAS之类的，好处：看似只用一次转发，坏处：OpenClash挂了或者配置文件/远程服务器有问题就直接全家断网。  
+所以，不推荐，不如上面两层NAT，就端口转发需要设置两次比较麻烦，当然你路由器直接不加那句话能上网就是无敌的，比如N1、AX86U（都是网上看到的，不一定保证可以）之类的。
 
-<p>参考引用：<br />
-<a href="https://www.cnblogs.com/osnosn/p/14253536.html">https://www.cnblogs.com/osnosn/p/14253536.html</a><br />
-<a href="https://codeantenna.com/a/L0EYdJ6au4">https://codeantenna.com/a/L0EYdJ6au4</a><br />
-<a href="https://adao.me/ruanjian/216.html">https://adao.me/ruanjian/216.html</a></p>
+参考引用：  
+&lt;https://www.cnblogs.com/osnosn/p/14253536.html&gt;  
+&lt;https://codeantenna.com/a/L0EYdJ6au4&gt;  
+&lt;https://adao.me/ruanjian/216.html&gt;
+</figure>
 
 
       

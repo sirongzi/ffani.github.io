@@ -119,9 +119,13 @@
 <meta property="og:site_name" content="丝丝的小窝">
 <meta property="og:description" content="项目地址：https://github.com/QiuSimons/YAOF">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-29.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-30-998x1024.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/08/image-31.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenWrt建议设置（个人备份）">
 <meta name="twitter:description" content="项目地址：https://github.com/QiuSimons/YAOF">
+<meta name="twitter:image" content="/assets/wp-content/uploads/2022/08/image-29.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -495,14 +499,12 @@
 
 <p>防火墙就默认，端口转发的话，两层NAT，主路由指向旁路由，再由旁路由指向机器特定IP，要PT的话记得一个端口指向一个端口，不要多对多。而且在qb等软件以及旁路由都关闭UPnP。</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/08/image-29.png)</figure>
-<p>OpenClash部分我有了改观，改成了FAKE-IP+混合模式，下面是如何规定某IP流量不经过OpenClash的方法（记得提行）。</p>
+<p><img src="/assets/wp-content/uploads/2022/08/image-29.png" alt="" />OpenClash部分我有了改观，改成了FAKE-IP+混合模式，下面是如何规定某IP流量不经过OpenClash的方法（记得提行）。</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>- SRC-IP-CIDR,192.168.2.208/32,DIRECT
 </code></pre></td></tr></tbody></table></div></div>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-30-998x1024.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/08/image-31.png)</figure>
+<p><img src="/assets/wp-content/uploads/2022/08/image-30-998x1024.png" alt="" /><img src="/assets/wp-content/uploads/2022/08/image-31.png" alt="" /></p>
 
 
       

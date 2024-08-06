@@ -119,9 +119,16 @@
 <meta property="og:site_name" content="丝丝的小窝">
 <meta property="og:description" content="1、网络-接口，找到WAN（pppoe-wan），修改-高级设置-使用网关跃点，修改为较小数值，比如1。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715932994-QQ截图20240517160244-1600x1205.jpg">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715933112-image-1600x1176.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/05/1715933415-image-1600x1017.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/07/1720349038-image-1600x280.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/07/1720349244-image.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2024/07/1720349255-image.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenWrt桥接后访问光猫方法">
 <meta name="twitter:description" content="1、网络-接口，找到WAN（pppoe-wan），修改-高级设置-使用网关跃点，修改为较小数值，比如1。">
+<meta name="twitter:image" content="/assets/wp-content/uploads/2024/05/1715932994-QQ截图20240517160244-1600x1205.jpg">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -501,28 +508,23 @@
 
   <p>1、网络-接口，找到WAN（pppoe-wan），修改-高级设置-使用网关跃点，修改为较小数值，比如1。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715932994-QQ截图20240517160244-1600x1205.jpg)</figure>
-<p>2、添加一个新接口，命名随意，比如命名为MAO（光猫的意思）</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715932994-QQ截图20240517160244-1600x1205.jpg" alt="" />2、添加一个新接口，命名随意，比如命名为MAO（光猫的意思）</p>
 
 <p>协议选“静态地址”，包括以下接口这里绑定WAN口，我这里是eth1，“以太网适配器: “eth1” (<a href="http://192.168.2.1/cgi-bin/luci/admin/network/network/wan">wan</a>, <a href="http://192.168.2.1/cgi-bin/luci/admin/network/network/wan6">wan6</a>)”</p>
 
 <p>IPv4 地址随便填一个光猫所在ip段的，我的光猫是192.168.1.1，我这里就填的192.168.1.2，IPv4 网关填光猫地址192.168.1.1。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715933112-image-1600x1176.png)</figure>
-<p>3、修改刚刚设置好的接口网关跃点为较大值（代表MAO的优先级低于WAN），比如我这里是60。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715933112-image-1600x1176.png" alt="" />3、修改刚刚设置好的接口网关跃点为较大值（代表MAO的优先级低于WAN），比如我这里是60。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/05/1715933415-image-1600x1017.png)</figure>
-<p>4、保存更改，便可以直接访问光猫地址了。</p>
+<p><img src="/assets/wp-content/uploads/2024/05/1715933415-image-1600x1017.png" alt="" />4、保存更改，便可以直接访问光猫地址了。</p>
 
 <p><strong>24/07/07更新 方法二</strong></p>
 
 <p>1、新建一个防火墙区域，取名<strong>modem</strong>，设置如下</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2024/07/1720349038-image-1600x280.png)</figure>
-<p>2、添加一个新接口，同上一样，不用设置网关跃点，只是防火墙区域选择刚才创建的modem，若创建后无法上网，重启openwrt即可。</p>
+<p><img src="/assets/wp-content/uploads/2024/07/1720349038-image-1600x280.png" alt="" />2、添加一个新接口，同上一样，不用设置网关跃点，只是防火墙区域选择刚才创建的modem，若创建后无法上网，重启openwrt即可。</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720349244-image.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2024/07/1720349255-image.png)</figure>
+<p><img src="/assets/wp-content/uploads/2024/07/1720349244-image.png" alt="" /><img src="/assets/wp-content/uploads/2024/07/1720349255-image.png" alt="" /></p>
 
 
       

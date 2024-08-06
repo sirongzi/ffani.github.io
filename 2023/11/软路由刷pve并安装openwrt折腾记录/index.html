@@ -501,32 +501,29 @@
 
   <p>因为又入手了一台J4125的工控机，那就只有玩起来了www</p>
 
-<figure class="wp-block-image size-thumbnail">![](/assets/wp-content/uploads/2023/11/1700390474-IMG_20231012_205242-300x300.jpg)</figure>
-<p>在已有的网络环境下（主要是ip段能自动获取，安装好op后能保持前后一致）插入网线，接好HDMI和鼠标、键盘，以及安装U盘（USB接口不够只能用usb集线器了）</p>
+<figure class="wp-block-image size-thumbnail">![](/assets/wp-content/uploads/2023/11/1700390474-IMG_20231012_205242-300x300.jpg)在已有的网络环境下（主要是ip段能自动获取，安装好op后能保持前后一致）插入网线，接好HDMI和鼠标、键盘，以及安装U盘（USB接口不够只能用usb集线器了）
 
-<p>选第一个</p>
+选第一个
 
-<figure class="wp-block-image size-medium">![](/assets/wp-content/uploads/2023/11/1700390689-IMG_20231119_184028_230-450x800.jpg)</figure>
-<figure class="wp-block-image size-medium">![](/assets/wp-content/uploads/2023/11/1700390735-IMG_20231119_184034_086-450x800.jpg)</figure>
-<p>安装完毕后显示器和键鼠切到电脑，访问刚才设置好的ip:8006进行访问，比如我是192.168.2.200:8006。这里推荐<a href="https://gitee.com/spoto/PVE_Generic_AIO">https://gitee.com/spoto/PVE_Generic_AIO</a>的教程，非常详细。</p>
+<figure class="wp-block-image size-medium">![](/assets/wp-content/uploads/2023/11/1700390689-IMG_20231119_184028_230-450x800.jpg)<figure class="wp-block-image size-medium">![](/assets/wp-content/uploads/2023/11/1700390735-IMG_20231119_184034_086-450x800.jpg)安装完毕后显示器和键鼠切到电脑，访问刚才设置好的ip:8006进行访问，比如我是192.168.2.200:8006。这里推荐[https://gitee.com/spoto/PVE\_Generic\_AIO](https://gitee.com/spoto/PVE_Generic_AIO)的教程，非常详细。
 
-<p>后续换阿里源（<a href="https://522ip.com/index.php/archives/542/">https://522ip.com/index.php/archives/542/</a>）<br />
-以及安装温度显示（<a href="https://www.right.com.cn/forum/thread-6754687-1-1.html">https://www.right.com.cn/forum/thread-6754687-1-1.html</a>）</p>
+后续换阿里源（&lt;https://522ip.com/index.php/archives/542/&gt;）  
+以及安装温度显示（&lt;https://www.right.com.cn/forum/thread-6754687-1-1.html&gt;）
 
-<p>准备一个OpenWrt系统，这里无脑推荐YAOF——<a href="https://github.com/QiuSimons/YAOF">https://github.com/QiuSimons/YAOF</a><br />
-下载X86-ext4的版本，比如<a href="https://github.com/QiuSimons/YAOF/releases/download/23.05.2/X86-GC404-Docker-2023-11-16-23.05.2-ext4.zip">X86-GC404-Docker-2023-11-16-23.05.2-ext4.zip</a></p>
+准备一个OpenWrt系统，这里无脑推荐YAOF——&lt;https://github.com/QiuSimons/YAOF&gt;  
+下载X86-ext4的版本，比如[X86-GC404-Docker-2023-11-16-23.05.2-ext4.zip](https://github.com/QiuSimons/YAOF/releases/download/23.05.2/X86-GC404-Docker-2023-11-16-23.05.2-ext4.zip)
 
-<p>按照司波图的教程将硬盘img改为iso进行上传并修改参数安装，重点来了，启动之前如果你机器是2个以上的网口，就直通n-1个网口给op，否则全部直通给op，直通后启动虚拟机。<br />
-YAOF的默认管理地址 192.168.1.1，我们需要手动将电脑ip改为192.168.1.x，掩码会自动生成255.255.255.0，其他不用填，然后就可以访问op的192.168.1.1地址了，用户名root，密码password，进行登陆并修改密码和后台ip地址和之前网段一样，比如我是设置成192.168.2.1，电脑dhcp修改为自动获取，重启op，并在PVE里设置op开机自动启动，基本配置完成。</p>
+按照司波图的教程将硬盘img改为iso进行上传并修改参数安装，重点来了，启动之前如果你机器是2个以上的网口，就直通n-1个网口给op，否则全部直通给op，直通后启动虚拟机。  
+YAOF的默认管理地址 192.168.1.1，我们需要手动将电脑ip改为192.168.1.x，掩码会自动生成255.255.255.0，其他不用填，然后就可以访问op的192.168.1.1地址了，用户名root，密码password，进行登陆并修改密码和后台ip地址和之前网段一样，比如我是设置成192.168.2.1，电脑dhcp修改为自动获取，重启op，并在PVE里设置op开机自动启动，基本配置完成。
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2023/11/1700391660-image-1600x532.png)</figure>
-<p>这里推荐下op的配置方案，家里用无脑推荐op单主路由，OpenClash+MosDNS的dns方案（MosDNS重定向53端口到5335，Clash使用<strong>Redir-Host</strong>模式[推荐使用meta内核的混合模式]，关闭本地DNS劫持，NameServer和FallBack只启用一个UDP，127.0.0.1:5335，指向MosDNS），微信推送插件推流通知给TG，WireGuard作为VPN回家方案（教程<a href="https://iyzm.net/openwrt/1736.html">https://iyzm.net/openwrt/1736.html</a>）。<br />
-另外meta推荐开启TCP并发，和统一延迟（设置15s），启用 GeoIP Dat 版数据库（需预先下载）。</p>
+![](/assets/wp-content/uploads/2023/11/1700391660-image-1600x532.png)这里推荐下op的配置方案，家里用无脑推荐op单主路由，OpenClash+MosDNS的dns方案（MosDNS重定向53端口到5335，Clash使用**Redir-Host**模式\[推荐使用meta内核的混合模式\]，关闭本地DNS劫持，NameServer和FallBack只启用一个UDP，127.0.0.1:5335，指向MosDNS），微信推送插件推流通知给TG，WireGuard作为VPN回家方案（教程&lt;https://iyzm.net/openwrt/1736.html&gt;）。  
+另外meta推荐开启TCP并发，和统一延迟（设置15s），启用 GeoIP Dat 版数据库（需预先下载）。
 
-<p>另外推荐一个op用来反向代理/获取ssl证书的插件lucky，地址<a href="https://github.com/gdy666/lucky">https://github.com/gdy666/lucky</a></p>
+另外推荐一个op用来反向代理/获取ssl证书的插件lucky，地址&lt;https://github.com/gdy666/lucky&gt;
 
-<p>全部安装后如果你觉得现在状态还不错，那一定要记得备份！！！推荐关机状态的备份和快照都存一份。<br />
-另外由于网口直通给了op导致备份时/恢复备份时，op需要处于停止状态，网口无法使用，网页端无法进行操作（<s>草，我当时网口全部直通给了op，人都麻了</s>），这时就需要接到没有直通的网口，然后手动修改电脑ip端和PVE一样，来进行操作。如果是备份可以直接拔电源再通电来启动（不推荐，我就是这样炸了一次）。</p>
+全部安装后如果你觉得现在状态还不错，那一定要记得备份！！！推荐关机状态的备份和快照都存一份。  
+另外由于网口直通给了op导致备份时/恢复备份时，op需要处于停止状态，网口无法使用，网页端无法进行操作（<s>草，我当时网口全部直通给了op，人都麻了</s>），这时就需要接到没有直通的网口，然后手动修改电脑ip端和PVE一样，来进行操作。如果是备份可以直接拔电源再通电来启动（不推荐，我就是这样炸了一次）。
+</figure></figure></figure>
 
 
       

@@ -119,9 +119,41 @@
 <meta property="og:site_name" content="丝丝的小窝">
 <meta property="og:description" content="一段记录从威联通转到群晖后的玩机教程最后的佛化版本。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-1.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-2.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-3.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-4.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-5.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-6.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-7.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-8.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-9.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-10.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-11.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-12.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-13.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-14.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-15.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-16.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-17.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-18.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-19.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-20.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-21.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-22-1600x555.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-23-1600x332.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-24.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-25-1600x312.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-26-1600x289.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-27.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-28.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-29.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-30.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2022/07/image-31.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="群晖种草教程——从玩机到佛系（自用备份版）">
 <meta name="twitter:description" content="一段记录从威联通转到群晖后的玩机教程最后的佛化版本。">
+<meta name="twitter:image" content="/assets/wp-content/uploads/2022/07/image-1.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -544,8 +576,7 @@ SMB打开，一般注册的时候就会开启了，群晖的局域网快速访�
 推荐常用的应用程序都设置一个短后缀域名，方便直接网页访问；<br />
 反向代理实例，需要路由器开启端口转发9998到9998，使原本只支持http的页面变为https，缺点是会占用两个端口，教程看<a href="https://www.bilibili.com/video/BV16K41177CZ">https://www.bilibili.com/video/BV16K41177CZ</a></p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-1.png)</figure>
-<p>通知设置——<br />
+<p><img src="/assets/wp-content/uploads/2022/07/image-1.png" alt="" />通知设置——<br />
 具体搜<strong>SMTP</strong>配置，推荐<strong>无脑outlook作为发信者</strong>。</p>
 
 <p>硬件和电源——<br />
@@ -571,27 +602,19 @@ DLNA功能因为群晖家用产品解码性能较弱，推荐不用开启，也�
 DS get里的“浏览器”功能可以访问网页并点击对应链接进行下载，非常方便，比任何你Docker安装的下载软件都好用，强烈推荐使用！！！<br />
 另：经测试，勾选启用UPnP后不用再额外在路由器进行16881（你就按照你的设置来）的端口进行“端口转发”。</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-2.png)</figure>
-<p>③个人网站搭建——<br />
+<p><img src="/assets/wp-content/uploads/2022/07/image-2.png" alt="" />③个人网站搭建——<br />
 进入Web station，首先把所有可以安装的后端套件都安上，服务套件只用安装phpMyAdmin即可（主要是网站迁移时的数据库导入和域名更名操作）。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-3.png)</figure>
-<p><strong>不推荐直接使用群晖自带的wordpress</strong>（版本较低，不能向上兼容，且不好做备份），以wordpress举例，将下载好的wordpress文件放入web/wordpress/下（举例），web后面的文件夹可以任意取名（英文+数字），如果是网站迁移过来的，还需要登陆phpMyAdmin并将数据库文件导入（不多介绍了，若遇到打不开的情况可以试试先用ip+端口的形式访问，若能访问成功再去数据库进行域名修改，初次安装就不用考虑这些问题）。将文件复制进去后，在“网页服务门户”点击新增，并如下配置：</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-3.png" alt="" /><strong>不推荐直接使用群晖自带的wordpress</strong>（版本较低，不能向上兼容，且不好做备份），以wordpress举例，将下载好的wordpress文件放入web/wordpress/下（举例），web后面的文件夹可以任意取名（英文+数字），如果是网站迁移过来的，还需要登陆phpMyAdmin并将数据库文件导入（不多介绍了，若遇到打不开的情况可以试试先用ip+端口的形式访问，若能访问成功再去数据库进行域名修改，初次安装就不用考虑这些问题）。将文件复制进去后，在“网页服务门户”点击新增，并如下配置：</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-4.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-5.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-6.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-7.png)</figure>
-<p>至此，你就可以愉快的用https://IP:端口号，或者https://域名:端口号来进行访问了。</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-4.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-5.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-6.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-7.png" alt="" />至此，你就可以愉快的用https://IP:端口号，或者https://域名:端口号来进行访问了。</p>
 
 <p>④云和备份——<br />
 使用Cloud Sync和Hyper Backup来完成。推荐备份目的地使用Dropbox、Google云端硬盘、以及使用Docker搭建阿里云WebDev后用WebDev完成。</p>
 
 <p>这里只强调一下Hyper Backup的一些注意事项，点击新建任务后首先选择的是备份目的地，而不是需要备份的地址和内容！其次如果要备份网站，需要同时备份网站数据库，勾选上</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-8.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-9.png)</figure>
-<p>即可。</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-8.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-9.png" alt="" />即可。</p>
 
 <p>还原的时候，注意要把整个*.hbk的文件夹全部选中。本人还原过一次，很稳健，数据库什么的都和之前的一模一样。群晖NB！</p>
 
@@ -605,21 +628,13 @@ DS get里的“浏览器”功能可以访问网页并点击对应链接进行�
 
 <p>不开启DLNA没必要安装媒体服务器。另外这两个可以自行选择安装</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-10.png)</figure>
-<p>前者有免费的苹果版本软件，可以外网访问播放视频。（唯一用处，不用苹果上购买nplayer通过sftp连接播放了），后者可以创建虚拟机，Linux的windows的都可以，自行探索吧，<strong>玩的话要加钱上内存</strong>，越多越好，直接+16G，三星DDR4 2666 16G。</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-10.png" alt="" />前者有免费的苹果版本软件，可以外网访问播放视频。（唯一用处，不用苹果上购买nplayer通过sftp连接播放了），后者可以创建虚拟机，Linux的windows的都可以，自行探索吧，<strong>玩的话要加钱上内存</strong>，越多越好，直接+16G，三星DDR4 2666 16G。</p>
 
 <h2 id="四docker">四、Docker</h2>
 
 <p>废话不多说，都看到这里了，应该不是小白了，直接上图：</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-11.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-12.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-13.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-14.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-15.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-16.png)</figure>
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-17.png)</figure>
-<p>这里只做推荐，具体的安装方法网上一搜一大把，我说个通用的操作方法吧，比如你点击对应的docker简介页面时，可能看到如下信息：</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-11.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-12.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-13.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-14.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-15.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-16.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-17.png" alt="" />这里只做推荐，具体的安装方法网上一搜一大把，我说个通用的操作方法吧，比如你点击对应的docker简介页面时，可能看到如下信息：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12</pre></td><td class="code"><pre class="highlight"><code>docker run -d \
   --name=calibre-web \
@@ -637,29 +652,15 @@ DS get里的“浏览器”功能可以访问网页并点击对应链接进行�
 
 <p>其中-e是environment，即上图里的环境变量，-v则是目录地址信息，也如上图所示，区别是“文件/文件夹”可以任意设置，但是后面的<strong>“装载路径”必须用docker给出的目录</strong>进行设置。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-18.png)</figure>
-<p>好，最后给个qbittorrent的自动订阅下载设置教程（电脑上也通用）——</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-18.png" alt="" />好，最后给个qbittorrent的自动订阅下载设置教程（电脑上也通用）——</p>
 
 <p>推荐设置：</p>
 
-<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-19.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-20.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-21.png)</figure>
-<p>浏览需要下载的并支持RSS订阅的网站，如dmhy.org、acg.rip、kisssub.org，这里以动漫花园dmhy.org举例，我们要下载《间谍过家家》。</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-19.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-20.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-21.png" alt="" />浏览需要下载的并支持RSS订阅的网站，如dmhy.org、acg.rip、kisssub.org，这里以动漫花园dmhy.org举例，我们要下载《间谍过家家》。</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-22-1600x555.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-23-1600x332.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-24.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-25-1600x312.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-26-1600x289.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-27.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-28.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-29.png)</figure>
-<p>另外，这个docker在群晖上有个坑，如下：</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-22-1600x555.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-23-1600x332.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-24.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-25-1600x312.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-26-1600x289.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-27.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-28.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-29.png" alt="" />另外，这个docker在群晖上有个坑，如下：</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-30.png)</figure>
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-31.png)</figure>
-<p>祝看得开心，以后有啥想到的再补充，虽然估计不得补充就是了，呜呜呜呜呜呜呜。</p>
+<p><img src="/assets/wp-content/uploads/2022/07/image-30.png" alt="" /><img src="/assets/wp-content/uploads/2022/07/image-31.png" alt="" />祝看得开心，以后有啥想到的再补充，虽然估计不得补充就是了，呜呜呜呜呜呜呜。</p>
 
 
       

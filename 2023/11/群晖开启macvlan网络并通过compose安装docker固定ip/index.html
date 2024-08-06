@@ -119,9 +119,12 @@
 <meta property="og:site_name" content="丝丝的小窝">
 <meta property="og:description" content="群晖开启macvlan网络，ssh登陆群晖">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/wp-content/uploads/2023/11/1700393609-image-1600x620.png">
+<meta property="og:image" content="/assets/wp-content/uploads/2023/11/1700393798-image-1600x1096.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="群晖开启macvlan网络并通过compose命令安装docker指定ip">
 <meta name="twitter:description" content="群晖开启macvlan网络，ssh登陆群晖">
+<meta name="twitter:image" content="/assets/wp-content/uploads/2023/11/1700393609-image-1600x620.png">
 
 
 <script type="text/javascript" id="hexo.configurations">
@@ -507,21 +510,20 @@ docker network create -d macvlan --subnet=192.168.2.0/24 --gateway=192.168.2.1 -
 docker create --name qbittorrent4ab --network macnet --ip=192.168.2.33 superng6/qbittorrentee:latest //创建容器qbittorrent4ab为容器名，可任意更改192.168.2.33为你固定的ip，superng6/qbittorrentee:latest为你拉取的容器镜像
 </code></pre></td></tr></tbody></table></div></div>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2023/11/1700393609-image-1600x620.png)</figure>
-<p>这里更推荐使用compose命令（免去ssh登陆）来进行基于macvlan网络的容器创建，参考如下——</p>
+<p><img src="/assets/wp-content/uploads/2023/11/1700393609-image-1600x620.png" alt="" />这里更推荐使用compose命令（免去ssh登陆）来进行基于macvlan网络的容器创建，参考如下——</p>
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2023/11/1700393798-image-1600x1096.png)</figure>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22</pre></td><td class="code"><pre class="highlight"><code>version: "3.8"
+<p><img src="/assets/wp-content/uploads/2023/11/1700393798-image-1600x1096.png" alt="" />```
+version: “3.8”</p>
 
-services:
+<p>services:
   AutoBangumi:
-    image: "estrellaxd/auto_bangumi:latest"
+    image: “estrellaxd/auto_bangumi:latest”
     container_name: AutoBangumi
     volumes:
       - ./config:/app/config
       - ./data:/app/data
     ports:
-      - "7892:7892"
+      - “7892:7892”
     restart: unless-stopped
     network_mode: macnet
     networks:
@@ -532,12 +534,12 @@ services:
       - AB_METHOD=Advance
       - PGID=1026
       - PUID=100
-      - UMASK=022
+      - UMASK=022</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code>
+以上是群晖的compose演示，比较简单，一看就会，再来一个——
+
 </code></pre></td></tr></tbody></table></div></div>
-
-<p>以上是群晖的compose演示，比较简单，一看就会，再来一个——</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22</pre></td><td class="code"><pre class="highlight"><code>version: "2.3"
+<p>version: “2.3”
 services:
   emby:
     image: lovechen/embyserver:latest
@@ -558,12 +560,12 @@ services:
       - 8095:8096 # HTTP port
     devices:
       - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
-    restart: unless-stopped
+    restart: unless-stopped</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code>
+qbittorrent容器会略微有点不一样，随便指定网路名会一直报错，这里找到了如下参考案例：
+
 </code></pre></td></tr></tbody></table></div></div>
-
-<p>qbittorrent容器会略微有点不一样，随便指定网路名会一直报错，这里找到了如下参考案例：</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24</pre></td><td class="code"><pre class="highlight"><code>version: "2.1"
+<p>version: “2.1”
 services:
   qbittorrent:
     image: linuxserver/qbittorrent:latest
@@ -586,10 +588,10 @@ services:
       - PGID=100
 networks: 
   macnet:
-    external: true
+    external: true</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>
 </code></pre></td></tr></tbody></table></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26</pre></td><td class="code"><pre class="highlight"><code>version: "2.1"
+<p>version: “2.1”
 services:
   qbittorrent:
     image: johngong/qbittorrent:4.1.9.1
@@ -615,7 +617,7 @@ services:
 networks: 
   macnet:
     external: true
-</code></pre></td></tr></tbody></table></div></div>
+```</p>
 
 <p>另外推荐下矿神源（<a href="https://spk7.imnks.com/">https://spk7.imnks.com/</a>）的CloudDrive2套件（<a href="https://www.clouddrive2.com/">https://www.clouddrive2.com/</a>），云上番剧，启动！</p>
 

@@ -491,8 +491,7 @@
 
 <p>然后是主路由要选择一个好的DNS服务器，其实都大差不差，如果大家有闲心的话，可以下面一样自己整理一个自己家的DNS延迟表格，非常直观。直接cmd，然后ping+ip就行了。</p>
 
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image.png)</figure>
-<p>公用DNS服务器</p>
+<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image.png)公用DNS服务器
 
 <figure class="wp-block-table has-small-font-size">| 名称 | DNS 服务器 IP 地址 | 我的延迟 |
 |---|---|---|
@@ -519,23 +518,20 @@
 | oracle+dynDNS | 216.146.35.35   216.146.36.36 | 请求超时 |
 | 瑞士瑞信银行DNS | 64.6.64.6   64.6.65.6 | 126ms TTL=53   35ms TTL=56 |
 
-</figure>
-<p>最后我选了阿里的两个DNS，因为延迟低。然后你问我TTL有啥用？我直接放图——</p>
+最后我选了阿里的两个DNS，因为延迟低。然后你问我TTL有啥用？我直接放图——
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2023/05/image-1-1600x1282.png)</figure>
-<p>其次是主路由实现搭梯子科学上网，我这里无脑推荐买华硕路由器，然后使用MerlinClash。这里不介绍具体方法。</p>
+![](/assets/wp-content/uploads/2023/05/image-1-1600x1282.png)其次是主路由实现搭梯子科学上网，我这里无脑推荐买华硕路由器，然后使用MerlinClash。这里不介绍具体方法。
 
-<p>在华硕路由器设置DNS（注意是在外部网路这里设置，内部网络DHCP那里也可以设置，但是请留空）：</p>
+在华硕路由器设置DNS（注意是在外部网路这里设置，内部网络DHCP那里也可以设置，但是请留空）：
 
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-2.png)</figure>
-<p>这里不推荐任何形式的DoH或者DoT，毕竟家用不用太考虑安全这方面，但是速度带来的体验几乎翻倍。</p>
+<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-2.png)这里不推荐任何形式的DoH或者DoT，毕竟家用不用太考虑安全这方面，但是速度带来的体验几乎翻倍。
 
 <s>然后在MerlinClash里把清除路由器自定义DNS关掉：</s>
 
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-3.png)</figure>
-<p>这里还是推荐清除路由器DNS，然后启用DNS编辑功能，在DNS编辑功能里面如果有你ping不通的DNS，则需要选择修改。MerlinClash默认的DNS如下——</p>
+<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-3.png)这里还是推荐清除路由器DNS，然后启用DNS编辑功能，在DNS编辑功能里面如果有你ping不通的DNS，则需要选择修改。MerlinClash默认的DNS如下——
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44<br/>45<br/>46<br/>47<br/>48<br/>49</pre></td><td class="code"><pre class="highlight"><code>dns:
+```
+dns:
   enable: true                      #开启DNS解析，必须开启，否则MC将无法解析
   ipv6: false                       #默认关闭，插件开启IP6支持口，自动打开
   listen: :23453                    #监听端口，不懂勿动
@@ -584,62 +580,59 @@
       - '+.licdn.com'
       #proxy
       - '+.renzhe.cloud'
-</code></pre></td></tr></tbody></table></div></div>
+```
 
-<p>可以参考说明：<a href="https://mcreadme.gitbook.io/mc/Advanced/dns">https://mcreadme.gitbook.io/mc/Advanced/dns</a></p>
+可以参考说明：&lt;https://mcreadme.gitbook.io/mc/Advanced/dns&gt;
 
-<p>然后，重要的来了。</p>
+然后，重要的来了。
 
-<p>你要实现啥，PT流量不能走代理，但是NAS需要代理吧，你要云备份访问GoogleDrive、Dropbox之类的、还要emby刮削数据、还有自动追番动漫花园的RSS也要能访问吧。而且还要让PT网站识别你为正确的IP而不是代理IP，那么你需要</p>
+你要实现啥，PT流量不能走代理，但是NAS需要代理吧，你要云备份访问GoogleDrive、Dropbox之类的、还要emby刮削数据、还有自动追番动漫花园的RSS也要能访问吧。而且还要让PT网站识别你为正确的IP而不是代理IP，那么你需要
 
-<p>1、PT软件的流量全部不走代理<br />
-2、NAS web访问走代理，BT流量不走代理<br />
-3、电视、手机、电脑全部走代理</p>
+1、PT软件的流量全部不走代理  
+2、NAS web访问走代理，BT流量不走代理  
+3、电视、手机、电脑全部走代理
 
-<p>好，思路清晰了，web访问走代理可以只允许80和443端口，全部走和全部不走其实也很容易实现，但是有一个重要的问题，就是PT也是搭建在群晖NAS上的，如何做到PT拥有独立IP呢？</p>
+好，思路清晰了，web访问走代理可以只允许80和443端口，全部走和全部不走其实也很容易实现，但是有一个重要的问题，就是PT也是搭建在群晖NAS上的，如何做到PT拥有独立IP呢？
 
-<p>我参考了</p>
+我参考了
 
-<p><a href="https://www.bilibili.com/video/BV1bd4y1c7uN/">https://www.bilibili.com/video/BV1bd4y1c7uN/</a><br />
-<a href="https://sleele.com/2020/03/08/%E7%BE%A4%E6%99%96%E5%88%9B%E5%BB%BA%E6%A1%A5%E6%8E%A5%E7%BD%91%E7%BB%9C-%E4%BD%BF%E5%AE%B9%E5%99%A8%E5%92%8C%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%80%E4%B8%AA%E7%BD%91%E6%AE%B5/">https://sleele.com/2020/03/08/%E7%BE%A4%E6%99%96%E5%88%9B%E5%BB%BA%E6%A1%A5%E6%8E%A5%E7%BD%91%E7%BB%9C-%E4%BD%BF%E5%AE%B9%E5%99%A8%E5%92%8C%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%80%E4%B8%AA%E7%BD%91%E6%AE%B5/</a></p>
+&lt;https://www.bilibili.com/video/BV1bd4y1c7uN/&gt;  
+&lt;https://sleele.com/2020/03/08/%E7%BE%A4%E6%99%96%E5%88%9B%E5%BB%BA%E6%A1%A5%E6%8E%A5%E7%BD%91%E7%BB%9C-%E4%BD%BF%E5%AE%B9%E5%99%A8%E5%92%8C%E8%B7%AF%E7%94%B1%E5%99%A8%E4%B8%80%E4%B8%AA%E7%BD%91%E6%AE%B5/&gt;
 
-<p>大概有3步吧：</p>
+大概有3步吧：
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code>sudo -i      /获取root权限
+```
+sudo -i      /获取root权限
 ip addr
-</code></pre></td></tr></tbody></table></div></div>
+```
 
-<p>终端中输入<code class="language-plaintext highlighter-rouge">ip addr</code>查看网络信息，找到你群晖ip地址所在的那行。</p>
+终端中输入`ip addr`查看网络信息，找到你群晖ip地址所在的那行。
 
-<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2023/05/image-4-1600x253.png)</figure>
-<p>我的是群晖IP所在网络接口是<code class="language-plaintext highlighter-rouge">ovs_eth0</code>,我估计大部分单网口的应该都是这个数值，复制这个<code class="language-plaintext highlighter-rouge">ovs_eth0</code>。</p>
+![](/assets/wp-content/uploads/2023/05/image-4-1600x253.png)我的是群晖IP所在网络接口是`ovs_eth0`,我估计大部分单网口的应该都是这个数值，复制这个`ovs_eth0`。
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code>sudo ip link set ovs_eth0 promisc on   #开启混杂模式
+```
+sudo ip link set ovs_eth0 promisc on   #开启混杂模式
 docker network create -d macvlan --subnet=网段/24 --gateway=网关 -o parent=ovs_eth0 macnet   #给docker容器添加一个名为macnet（可自己设置）的macvlan网络，网段比如我的就是192.168.2.0/24，（最后一位填0），网关是192.168.2.1（主路由地址）
-</code></pre></td></tr></tbody></table></div></div>
+```
 
-<p>然后是创建容器，这里推荐create，而不是run。（需要预先下载好容器镜像）</p>
+然后是创建容器，这里推荐create，而不是run。（需要预先下载好容器镜像）
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>docker create --name qbittorrent-pt --network macnet --ip=192.168.2.152 linuxserver/qbittorrent   #其中qbittorrent-pt是你自定义的容器名称，macnet是你刚才设置的macvlan网络名称，192.168.2.152是你给这个容器分配的固定ip地址，需要在刚才的网段内，linuxserver/qbittorrent是拉取的镜像docker的名称，必须和官方名称一模一样，如果你是需要特定版本，请先预先下载好特定版本并且修改这里的名称，比如我还拉取了一个johngong/qbittorrent:4.1.9.1的镜像。
-</code></pre></td></tr></tbody></table></div></div>
+```
+docker create --name qbittorrent-pt --network macnet --ip=192.168.2.152 linuxserver/qbittorrent   #其中qbittorrent-pt是你自定义的容器名称，macnet是你刚才设置的macvlan网络名称，192.168.2.152是你给这个容器分配的固定ip地址，需要在刚才的网段内，linuxserver/qbittorrent是拉取的镜像docker的名称，必须和官方名称一模一样，如果你是需要特定版本，请先预先下载好特定版本并且修改这里的名称，比如我还拉取了一个johngong/qbittorrent:4.1.9.1的镜像。
+```
 
-<figure class="wp-block-image size-large is-resized">![](/assets/wp-content/uploads/2023/05/image-5-1600x970.png)</figure>
-<p>这些地方都可以复制到最新的或者特定版本的镜像名称。</p>
+<figure class="wp-block-image size-large is-resized">![](/assets/wp-content/uploads/2023/05/image-5-1600x970.png)这些地方都可以复制到最新的或者特定版本的镜像名称。
 
-<p>容器创建好后，我们就可以在群晖的容器管理里面修改环境、文件（夹）映射参数之类的了。</p>
+容器创建好后，我们就可以在群晖的容器管理里面修改环境、文件（夹）映射参数之类的了。
 
-<p>然后是PT软件设置，这里以qb为例：</p>
+然后是PT软件设置，这里以qb为例：
 
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-6.png)</figure>
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-8.png)</figure>
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-9.png)</figure>
-<p>端口ip请固定，并在主路由设置好对应端口转发。不开启UPNP的原因是容易端口冲突，因为我有多个qb软件，而这个UPNP功能并不是一对一，而是多对一，如果你都设置成52000附近的话非常容易冲突，我索性就关闭了。</p>
+<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-6.png)<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-8.png)<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-9.png)端口ip请固定，并在主路由设置好对应端口转发。不开启UPNP的原因是容易端口冲突，因为我有多个qb软件，而这个UPNP功能并不是一对一，而是多对一，如果你都设置成52000附近的话非常容易冲突，我索性就关闭了。
 
-<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-7.png)</figure>
-<p>然后在MerlinClash里将qb地址的ip设置为全不走代理。</p>
+<figure class="wp-block-image size-full is-resized">![](/assets/wp-content/uploads/2023/05/image-7.png)然后在MerlinClash里将qb地址的ip设置为全不走代理。
 
-<figure class="wp-block-image size-large is-resized">![](/assets/wp-content/uploads/2023/05/image-10.png)</figure>
-<p>至此就设定完成了，可以开始愉快的PT刷积分刷流量了，233</p>
+<figure class="wp-block-image size-large is-resized">![](/assets/wp-content/uploads/2023/05/image-10.png)至此就设定完成了，可以开始愉快的PT刷积分刷流量了，233
+</figure></figure></figure></figure></figure></figure></figure></figure></figure></figure>
 
 
       

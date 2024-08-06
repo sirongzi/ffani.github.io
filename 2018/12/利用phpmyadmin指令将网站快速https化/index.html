@@ -503,23 +503,22 @@
 
 <p>第二步，SSL证书安装后，https版本就可以访问了。原来网站上的所有URL都需要改到https版本，包括链接、图片、JS等，所以可能需要修改文章数据库、模板、插件等。</p>
 
-<figure class="wp-block-image">![](/assets/wp-content/uploads/2018/12/url-https-1.png)</figure>
-<p>特别注意，“站点主题设置”下的所有链接、“外观——小工具——侧边栏”的所有链接。</p>
+<figure class="wp-block-image">![](/assets/wp-content/uploads/2018/12/url-https-1.png)特别注意，“站点主题设置”下的所有链接、“外观——小工具——侧边栏”的所有链接。
 
-<p>这样，绝大部分导航中的链接就由wordpress系统自动改为https版本了。但很可能还有一些导航性质的链接是硬编码在模板中的，比如某些主题下面的版权声明，那是人工写在模板里的，别忘了改。</p>
+这样，绝大部分导航中的链接就由wordpress系统自动改为https版本了。但很可能还有一些导航性质的链接是硬编码在模板中的，比如某些主题下面的版权声明，那是人工写在模板里的，别忘了改。
 
-<p>第三步，以前帖子正文中人工加的内部链接也需要自己改。当时小白的我想到的第一个方法是手工一个一个改，后来想了一下，天啦噜，这要改死人啊……肯定能实现自动化的。最后找到了如下方法——</p>
+第三步，以前帖子正文中人工加的内部链接也需要自己改。当时小白的我想到的第一个方法是手工一个一个改，后来想了一下，天啦噜，这要改死人啊……肯定能实现自动化的。最后找到了如下方法——
 
-<p>如果使用phpMyadmin，用下面指令跑一下数据库就行了：</p>
+如果使用phpMyadmin，用下面指令跑一下数据库就行了：
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>update wp_posts set post_content = replace(&lt;br&gt;&lt;/br&gt; post_content, "http://sirongzi.xyz:9999/",&lt;br&gt;&lt;/br&gt; "/assets/");
-</code></pre></td></tr></tbody></table></div></div>
+```
+update wp_posts set post_content = replace(<br />&lt;/br&gt; post_content, "http://sirongzi.xyz:9999/",<br />&lt;/br&gt; "/assets/");
+```
 
-<figure class="wp-block-image">![](/assets/wp-content/uploads/2018/12/phpmyadmin-updated-https-process-1600x516.png)</figure>
-<figure class="wp-block-image">![](/assets/wp-content/uploads/2018/12/phpmyadmin-updated-https-succeed-1600x332.png)</figure>
-<p>注意选中你存放wordpress的数据库再进行操作不然会报错。</p>
+<figure class="wp-block-image">![](/assets/wp-content/uploads/2018/12/phpmyadmin-updated-https-process-1600x516.png)<figure class="wp-block-image">![](/assets/wp-content/uploads/2018/12/phpmyadmin-updated-https-succeed-1600x332.png)注意选中你存放wordpress的数据库再进行操作不然会报错。
 
-<p>最后，你就可以打开你的网站访问https然后看是否有小锁图标了，如果还没有可以利用Chrome浏览器的开发人员工具，按F12打开，在Sources界面一个个看下是哪儿的链接是非https然后再想办法解决了。</p>
+最后，你就可以打开你的网站访问https然后看是否有小锁图标了，如果还没有可以利用Chrome浏览器的开发人员工具，按F12打开，在Sources界面一个个看下是哪儿的链接是非https然后再想办法解决了。
+</figure></figure></figure>
 
 
       
