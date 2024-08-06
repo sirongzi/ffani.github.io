@@ -1,0 +1,1409 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="丝丝的小窝" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一段记录从威联通转到群晖后的玩机教程最后的佛化版本。">
+<meta name="keywords" content="动漫, 丝丝的小窝， 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="群晖种草教程——从玩机到佛系（自用备份版）">
+<meta property="og:url" content="http://localhost:4000/2022/07/%E7%BE%A4%E6%99%96%E7%A7%8D%E8%8D%89%E6%95%99%E7%A8%8B-%E4%BB%8E%E7%8E%A9%E6%9C%BA%E5%88%B0%E4%BD%9B%E7%B3%BB%EF%BC%88%E8%87%AA%E7%94%A8%E5%A4%87%E4%BB%BD%E7%89%88%EF%BC%89/">
+<meta property="og:site_name" content="丝丝的小窝">
+<meta property="og:description" content="一段记录从威联通转到群晖后的玩机教程最后的佛化版本。">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="群晖种草教程——从玩机到佛系（自用备份版）">
+<meta name="twitter:description" content="一段记录从威联通转到群晖后的玩机教程最后的佛化版本。">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/"/>
+
+
+
+
+
+  <title>群晖种草教程——从玩机到佛系（自用备份版） | 丝丝的小窝</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">丝丝的小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个兴趣使然的小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-home2">
+          <a href="https://sirongzi.xyz/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            博客站I
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-home3">
+          <a href="https://sirongzi.day/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            博客站II
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-friendship">
+          <a href="/friendship" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            友链
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2022/07/%E7%BE%A4%E6%99%96%E7%A7%8D%E8%8D%89%E6%95%99%E7%A8%8B-%E4%BB%8E%E7%8E%A9%E6%9C%BA%E5%88%B0%E4%BD%9B%E7%B3%BB%EF%BC%88%E8%87%AA%E7%94%A8%E5%A4%87%E4%BB%BD%E7%89%88%EF%BC%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="稲葉飯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="丝丝的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            群晖种草教程——从玩机到佛系（自用备份版）
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-07-25T21:46:38+08:00">
+                2022-07-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%9D%82%E8%B0%88" itemprop="url" rel="index">
+                    <span itemprop="name">杂谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <blockquote>
+  <p>一段记录从威联通转到群晖后的玩机教程最后的佛化版本。</p>
+</blockquote>
+
+<div class="wp-block-getwid-table-of-contents is-style-default">- [一、群晖的购买](#g8806ab5f17bf)
+- [二、系统基础设置](#g82fe3370b6b4)
+- [三、群晖常用自带软件设置和使用](#g7a38fb14f7c7)
+- [四、Docker](#gf90b041941d4)
+
+</div>
+<h2 id="一群晖的购买">一、群晖的购买</h2>
+
+<p>群晖嘛，买软件送硬件。<br />
+NAS这种东西，要上就上最好的，群晖目前就直接DS920+走起，别去京东原价买，走淘宝，价格3850（2021/09）。其实硬盘也是，推荐<strong>直接16T氦气盘</strong>，打折1800左右入手（2022），我就是买了4*4T的监控盘，现在有点后悔。<br />
+我买NAS就是基于它的<strong>影音功能和大容量</strong>，以及免费的个人网页服务器，其他很惊喜的功能都是附带的。</p>
+
+<h2 id="二系统基础设置">二、系统基础设置</h2>
+
+<p>总的来说，设置错了都不要怕，都可以改！都可以改！都可以改！<br />
+一些说明：本人家庭网络带<strong>IPV4</strong>不带IPV6，所以只有IPV4的功能设置介绍。<br />
+省钱tips：<strong>不装虚拟机</strong>不用额外添加内存（<strong>原装4G够用</strong>），不做企业级数据交换（同时100+用户访问并读写）<strong>不用额外添加固态</strong>作为缓存。也<strong>不推荐使用固态SATA硬盘</strong>放在4个盘位的任何位置。</p>
+
+<p>1.注册并登陆自己的群晖账号（直接<strong>中国大陆</strong>，一样可以Let’s Encrypt自动获取SSL证书，也方便备案，如果你要用443或者80端口的话，电信即使备案也只有443，其他两家好像备案后会给你开放80端口）。<br />
+2.设置的机器名称是专属的，推荐自己好记的，以后用群晖的app会用到（虽然也只会填一次而已啦）。<br />
+3.设置硬盘<strong>储存池</strong>并添加<strong>储存空间</strong>，个人用户<strong>无脑推荐Basic</strong>和系统默认的Btrfs，<strong>不用做任何RAID</strong>（硬盘第一次可以全盘检查一次，不过非常费时间，<strong>推荐直接跳过全盘检查</strong>！硬盘SMART检查可以开一个，一个月一次基本就行，也不用做备份完整性检查），你要是有备份需要，我相信，你就那点数据，阿里云备份一个、百度云备份一个、坚果云、蓝奏云……随便哪个其实都比你的热备份靠谱，或者你直接冷备份在个人电脑，插块硬盘只存都比在NAS备份强。<br />
+4.创建<strong>共享文件夹</strong>，我是每个盘只创建了一个，用数字1、2、3、4来表示，方便对应和管理。</p>
+
+<p>打开群晖<strong>设置</strong>，左边我一个个对应来说。</p>
+
+<p>文件服务——<br />
+SMB打开，一般注册的时候就会开启了，群晖的局域网快速访问的基本功能；<br />
+<strong>FTP关闭，只打开SFTP，并改掉默认的22端口</strong>；<br />
+其他你没用到的，推荐全部关闭（默认也是关闭）。</p>
+
+<p>用户与群组——<br />
+默认就好，即不启用admin用户，使用个人从属于administrators组的账号。</p>
+
+<p>外部访问——<br />
+启用QuickConnect，DDNS推荐从Docker设置（因为路由器搭梯子后无法正确识别本地公网IP），端口号如果是默认的5000和5001，推荐路由器<strong>不要直接映射这两个端口</strong>（即不要直接用5001映射5001,5000映射5000，可以从51000映射5001这样之类的）（映射即<strong>端口转发</strong>）。</p>
+
+<p>网络——<br />
+搭梯子常规最下面设置IP为127.0.0.1，端口为docker端口比如7890，并勾选“对于本地地址不使用代理服务器”。</p>
+
+<p>安全性——<br />
+防火墙没有规则可以直接关闭。<br />
+一定要启用自动封锁。<br />
+证书一栏，如果是自己的域名，要自己新增并添加。（推荐小白并不搭梯子的用户直接免费白嫖群晖的域名，即在外部访问——DDNS新增一个Synology供应商的域名；其他用户自己购买个性域名，并在搭梯子的情况下用docker做DDNS，并自己上传对应的安全证书，这里推荐用DNSpot解析并获取安全证书，目前证书签发时效为一年）。<br />
+添加证书的教程看这里<a href="https://docs.dnspod.cn/dns/dnspod-synology-ssl/">https://docs.dnspod.cn/dns/dnspod-synology-ssl/</a></p>
+
+<p>终端机和SNMP——<br />
+用的时候短暂启用SSH，并<strong>常年关闭这两个功能</strong>。并且推荐和我一样的小白，<strong>非必要就不要用任何SSH命令</strong>。</p>
+
+<p>登陆门户——<br />
+开启“自动将DSM桌面的HTTP连接重定向到HTTPS”；<br />
+推荐常用的应用程序都设置一个短后缀域名，方便直接网页访问；<br />
+反向代理实例，需要路由器开启端口转发9998到9998，使原本只支持http的页面变为https，缺点是会占用两个端口，教程看<a href="https://www.bilibili.com/video/BV16K41177CZ">https://www.bilibili.com/video/BV16K41177CZ</a></p>
+
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-1.png)</figure>
+<p>通知设置——<br />
+具体搜<strong>SMTP</strong>配置，推荐<strong>无脑outlook作为发信者</strong>。</p>
+
+<p>硬件和电源——<br />
+推荐<strong>静音模式</strong>；<br />
+推荐<strong>配置UPS</strong>（后备式不断电系统，占用一个USB插槽，需要额外加钱）；</p>
+
+<p>更新和还原——<br />
+系统还原（最后一个）会删除所有数据，包括硬盘，别问我怎么知道的。</p>
+
+<h2 id="三群晖常用自带软件设置和使用">三、群晖常用自带软件设置和使用</h2>
+
+<p>我的原则是，能用自带的软件绝对不碰任何第三方软件或者docker。</p>
+
+<p>①本地或异地播放影视——<br />
+常用的SMB功能只需要设置好对应用户/用户组可以访问的共享文件夹，就可以通过手机、平板、电脑进行<strong>局域网</strong>在线访问了，这是最常用的功能。<br />
+手机端推荐<strong>nplayer/mxplayer</strong>（使用<strong>硬解码+</strong>）、苹果推荐nplayer（需付费）、电视用kodi、nplayer、mxplayer都可以，推荐mxplayer，加载字体较快，其他两个会卡半天（也许是索尼电视的锅，不确定，无对照组），但是界面还是nplayer的好看。<br />
+DLNA功能因为群晖家用产品解码性能较弱，推荐不用开启，也不用安装对应的软件。<br />
+如果需要外部访问，手机端可以使用DS file（群晖app软件）进行登录，再用nplayer之类的播放器播放即可，或者使用上面提到的sftp方式，用域名+端口号进行访问（需要有公网IP做DDNS或者做内网穿透并绑定域名）。</p>
+
+<p>②下载——<br />
+即Download station，手机端叫DS get。<br />
+设置方面：同时下载数（建议15-20），其他设置如下。RSS添加订阅后加入下载过滤器可以自动下载含有xx字样并不含xx字样的bt文件到对应的下载地址（但是建议只使用DS get做一些偶尔需要远程访问手动下载的操作即可，自动化的下载使用下面要讲到的Docker里的qbittorrent进行。）<br />
+DS get里的“浏览器”功能可以访问网页并点击对应链接进行下载，非常方便，比任何你Docker安装的下载软件都好用，强烈推荐使用！！！<br />
+另：经测试，勾选启用UPnP后不用再额外在路由器进行16881（你就按照你的设置来）的端口进行“端口转发”。</p>
+
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-2.png)</figure>
+<p>③个人网站搭建——<br />
+进入Web station，首先把所有可以安装的后端套件都安上，服务套件只用安装phpMyAdmin即可（主要是网站迁移时的数据库导入和域名更名操作）。</p>
+
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-3.png)</figure>
+<p><strong>不推荐直接使用群晖自带的wordpress</strong>（版本较低，不能向上兼容，且不好做备份），以wordpress举例，将下载好的wordpress文件放入web/wordpress/下（举例），web后面的文件夹可以任意取名（英文+数字），如果是网站迁移过来的，还需要登陆phpMyAdmin并将数据库文件导入（不多介绍了，若遇到打不开的情况可以试试先用ip+端口的形式访问，若能访问成功再去数据库进行域名修改，初次安装就不用考虑这些问题）。将文件复制进去后，在“网页服务门户”点击新增，并如下配置：</p>
+
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-4.png)</figure>
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-5.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-6.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-7.png)</figure>
+<p>至此，你就可以愉快的用https://IP:端口号，或者https://域名:端口号来进行访问了。</p>
+
+<p>④云和备份——<br />
+使用Cloud Sync和Hyper Backup来完成。推荐备份目的地使用Dropbox、Google云端硬盘、以及使用Docker搭建阿里云WebDev后用WebDev完成。</p>
+
+<p>这里只强调一下Hyper Backup的一些注意事项，点击新建任务后首先选择的是备份目的地，而不是需要备份的地址和内容！其次如果要备份网站，需要同时备份网站数据库，勾选上</p>
+
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-8.png)</figure>
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-9.png)</figure>
+<p>即可。</p>
+
+<p>还原的时候，注意要把整个*.hbk的文件夹全部选中。本人还原过一次，很稳健，数据库什么的都和之前的一模一样。群晖NB！</p>
+
+<p>⑤其他——</p>
+
+<p>主要是Synology Photos搭配手机端同名app进行手机照片备份，推荐全家一起来，都注册个账号，还可以通过app互相分享到共享空间，很有趣的。</p>
+
+<p>Synology Drive来进行家庭内文件共享，虽然是工作软件，但是也能家用嘛。（本人基本不用……）</p>
+
+<p>Audio Station来听音乐，建议添加一个QQ音乐的歌词插件，具体方法自行搜索。</p>
+
+<p>不开启DLNA没必要安装媒体服务器。另外这两个可以自行选择安装</p>
+
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-10.png)</figure>
+<p>前者有免费的苹果版本软件，可以外网访问播放视频。（唯一用处，不用苹果上购买nplayer通过sftp连接播放了），后者可以创建虚拟机，Linux的windows的都可以，自行探索吧，<strong>玩的话要加钱上内存</strong>，越多越好，直接+16G，三星DDR4 2666 16G。</p>
+
+<h2 id="四docker">四、Docker</h2>
+
+<p>废话不多说，都看到这里了，应该不是小白了，直接上图：</p>
+
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-11.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-12.png)</figure>
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-13.png)</figure>
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-14.png)</figure>
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-15.png)</figure>
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-16.png)</figure>
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-17.png)</figure>
+<p>这里只做推荐，具体的安装方法网上一搜一大把，我说个通用的操作方法吧，比如你点击对应的docker简介页面时，可能看到如下信息：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12</pre></td><td class="code"><pre class="highlight"><code>docker run -d \
+  --name=calibre-web \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e DOCKER_MODS=linuxserver/mods:universal-calibre `#optional` \
+  -e OAUTHLIB_RELAX_TOKEN_SCOPE=1 `#optional` \
+  -p 8083:8083 \
+  -v /path/to/data:/config \
+  -v /path/to/calibre/library:/books \
+  --restart unless-stopped \
+  lscr.io/linuxserver/calibre-web:latest
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>其中-e是environment，即上图里的环境变量，-v则是目录地址信息，也如上图所示，区别是“文件/文件夹”可以任意设置，但是后面的<strong>“装载路径”必须用docker给出的目录</strong>进行设置。</p>
+
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-18.png)</figure>
+<p>好，最后给个qbittorrent的自动订阅下载设置教程（电脑上也通用）——</p>
+
+<p>推荐设置：</p>
+
+<figure class="wp-block-image size-full">![](/assets/wp-content/uploads/2022/07/image-19.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-20.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-21.png)</figure>
+<p>浏览需要下载的并支持RSS订阅的网站，如dmhy.org、acg.rip、kisssub.org，这里以动漫花园dmhy.org举例，我们要下载《间谍过家家》。</p>
+
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-22-1600x555.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-23-1600x332.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-24.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-25-1600x312.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-26-1600x289.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-27.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-28.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-29.png)</figure>
+<p>另外，这个docker在群晖上有个坑，如下：</p>
+
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-30.png)</figure>
+<figure class="wp-block-image size-large">![](/assets/wp-content/uploads/2022/07/image-31.png)</figure>
+<p>祝看得开心，以后有啥想到的再补充，虽然估计不得补充就是了，呜呜呜呜呜呜呜。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/08/%E5%AE%B6%E5%BA%AD%E7%BD%91%E7%BB%9C%E5%B8%83%E5%B1%80%E4%B9%8B%E7%BE%A4%E6%99%96%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AE%89%E8%A3%85openwrt%E4%BD%9C%E6%97%81%E8%B7%AF%E7%94%B1/" rel="next" title="家庭网络布局之群晖虚拟机安装OpenWrt作旁路由">
+                <i class="fa fa-chevron-left"></i> 家庭网络布局之群晖虚拟机安装OpenWrt作旁路由
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/07/%EF%BC%88451-460%EF%BC%89%E8%AE%B0%E4%B8%8B%E6%88%91%E7%9C%8B%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E6%97%A5%E6%9C%AC%E5%8A%A8%E6%BC%AB/" rel="prev" title="（451-460）记下我看过的那些日本动漫">
+                （451-460）记下我看过的那些日本动漫 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.png"
+               alt="稲葉飯" />
+          <p class="site-author-name" itemprop="name">稲葉飯</p>
+           
+              <p class="site-description motion-element" itemprop="description">饭饭的github小窝,一个白嫖的网站</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">132</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#一群晖的购买"> <span class="nav-number">1</span> <span class="nav-text">一、群晖的购买</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#二系统基础设置"> <span class="nav-number">2</span> <span class="nav-text">二、系统基础设置</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#三群晖常用自带软件设置和使用"> <span class="nav-number">3</span> <span class="nav-text">三、群晖常用自带软件设置和使用</span> </a> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#四docker"> <span class="nav-number">4</span> <span class="nav-text">四、Docker</span> </a> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">稲葉飯</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+

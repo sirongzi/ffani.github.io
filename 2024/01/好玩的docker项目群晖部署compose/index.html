@@ -1,0 +1,1771 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="丝丝的小窝" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="所有docker项目均采用docker compose的方式部署">
+<meta name="keywords" content="动漫, 丝丝的小窝， 博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="好玩的docker项目——群晖部署compose">
+<meta property="og:url" content="http://localhost:4000/2024/01/%E5%A5%BD%E7%8E%A9%E7%9A%84docker%E9%A1%B9%E7%9B%AE%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2compose/">
+<meta property="og:site_name" content="丝丝的小窝">
+<meta property="og:description" content="所有docker项目均采用docker compose的方式部署">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="好玩的docker项目——群晖部署compose">
+<meta name="twitter:description" content="所有docker项目均采用docker compose的方式部署">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/"/>
+
+
+
+
+
+  <title>好玩的docker项目——群晖部署compose | 丝丝的小窝</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">丝丝的小窝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个兴趣使然的小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-home2">
+          <a href="https://sirongzi.xyz/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            博客站I
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-home3">
+          <a href="https://sirongzi.day/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            博客站II
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-friendship">
+          <a href="/friendship" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            友链
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2024/01/%E5%A5%BD%E7%8E%A9%E7%9A%84docker%E9%A1%B9%E7%9B%AE%E7%BE%A4%E6%99%96%E9%83%A8%E7%BD%B2compose/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="稲葉飯">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="丝丝的小窝">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+          
+          
+            好玩的docker项目——群晖部署compose
+          
+        </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2024-01-07T14:22:00+08:00">
+                2024-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E6%9D%82%E8%B0%88" itemprop="url" rel="index">
+                    <span itemprop="name">杂谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <blockquote>
+  <p><cite>所有docker项目均采用docker compose的方式部署</cite></p>
+</blockquote>
+
+<p><strong>1、emby（影音服务器）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21</pre></td><td class="code"><pre class="highlight"><code>version: "2.3"
+services:
+  emby:
+    image: lovechen/embyserver:latest
+    container_name: embyserver-cp
+    network_mode: bridge
+    environment:
+      - UID=1026
+      - GID=100
+      - GIDLIST=100,0
+    volumes:
+      - /volume1/docker/emby:/config
+      - /volume1/1/raws-Music:/data
+      - /volume4/4:/data1
+      - /volume3/3:/data2
+      - /volume2/2:/data3
+    ports:
+      - 8095:8096
+    devices:
+      - /dev/dri:/dev/dri
+    restart: unless-stopped
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>推荐关闭硬件转码功能，使用开心版只是因为可以显示歌词。数据库这里推荐将<em>数据库缓存大小（MB）</em>改为512，<em>分析行限制</em>改为4000。</p>
+
+<p>另外，如果你启用了实时监控，但是没生效，不扫描新文件，网上很多人给的方法是定时重启emby、去计划任务设置Scan media library狠狠地扫，这些都是错的，其实是元数据信息太多，然后群晖有限制上限导致的，具体可以参见<a href="https://emby.media/community/index.php?/topic/106276-how-to-fix-rtm-not-working-caused-by-limited-inotify-instanceswatches/">https://emby.media/community/index.php?/topic/106276-how-to-fix-rtm-not-working-caused-by-limited-inotify-instanceswatches/</a><br />
+解决方式：群晖控制面板-计划任务-添加一个root任务，取名随便，比如fix for RTM，执行如下脚本即可——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code>sysctl fs.inotify.max_user_watches=1048576;
+sysctl fs.inotify.max_user_instances=4096;
+</code></pre></td></tr></tbody></table></div></div>
+
+<p><strong>2、qbittorrent（BT下载器）</strong></p>
+
+<p>使用下载器之前，推荐提前建立一个macvlan的网络接口，ssh登录群晖——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10</pre></td><td class="code"><pre class="highlight"><code>sudo -i
+#获取root权限
+ip addr
+#查看网络接口名称，通常不是eth0就是ovs_eth0
+sudo ip link set ovs_eth0 promisc on
+#开启混杂模式
+docker network create -d macvlan --subnet=192.168.2.0/24 --gateway=192.168.2.1 --ipv6 --subnet=fd0d:7eb5:2afd::/64 --gateway=fd0d:7eb5:2afd::1 -o parent=ovs_eth0 macnet
+#双栈版本，192.168.2.0改为你的ipv4网段，192.168.2.1改为你的ipv4网关，后面ipv6随便设置一个f开头的内网地址，可以照抄，macnet可以随便取名，后面建立容器需要用到
+docker network create -d macvlan --subnet=192.168.2.0/24 --gateway=192.168.2.1 -o parent=ovs_eth0 macnet
+#仅ipv4版本，如果添加错了，可以去群晖container manager网络里面直接删除，如果删除不了，取消已经链接的容器就可以执行删除了
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>这里推荐qbittorrent的4.3.9版本，给两个案例仅供参考——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24</pre></td><td class="code"><pre class="highlight"><code>version: "2.1"
+services:
+  qbittorrent:
+    image: linuxserver/qbittorrent:14.3.9
+    container_name: qbittorrent-pt
+    restart: unless-stopped
+    networks: 
+      macnet:
+        ipv4_address: 192.168.2.4
+    volumes:
+      - /volume1/docker/qbittorrent-pt:/config
+      - /volume3/3/PT:/downloads
+    environment:
+      - WEBUI_PORT=8080
+      - TZ=Asia/Shanghai
+      - PUID=1026
+      - PGID=100
+    ports:
+      - 8080:8080
+      - 52004:52004
+      - 52004:52004/udp
+networks: 
+  macnet:
+    external: true
+</code></pre></td></tr></tbody></table></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26</pre></td><td class="code"><pre class="highlight"><code>version: "2.1"
+services:
+  qbittorrent:
+    image: johngong/qbittorrent:4.3.9
+    container_name: qbittorrent-skyey2
+    restart: unless-stopped
+    networks: 
+      macnet:
+        ipv4_address: 192.168.2.5
+    volumes:
+      - /volume1/docker/qbittorrent-skyey2:/config
+      - /volume1/1/downloads/pt:/Downloads
+    environment:
+      - WEBUIPORT=8989
+      - TZ=Asia/Shanghai
+      - PUID=1026
+      - PGID=100
+      - UMASK=022
+      - TRACKERSAUTO=NO
+    ports:
+      - 8989:8989
+      - 52003:52003
+      - 52003:52003/udp
+networks: 
+  macnet:
+    external: true
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>另外说下个人喜欢的配置——<br />
+选项-下载-默认 Torrent 管理模式改为自动，自己创建分类的时候请设置好下载地址，其他地方全不打钩；连接，全不勾选；<br />
+速度-设置速度限制，保持默认选1、3；BitTorrent，如果是BT勾选隐私前三个，如果是PT，隐私均不勾选，并关闭做种限制，均关掉Torrent 排队和自动添加tracker；<br />
+如果需要外网访问，在Web UI-验证-启用 Host header 属性验证，取消勾选。<br />
+其他保持默认即可。另外，如果发现切换版本后种子信息不显示（没有文件、tracker信息等），清除下浏览器cookie和缓存即可，并不是降级/升级版本失败。</p>
+
+<p><strong>3、AutoBangumi（自动追番神器）</strong></p>
+
+<p>因为群晖出于安全考虑，有默认限制macvlan网络的容器与宿主机之间的访问，所以如果把AutoBangumi建立在host或者bridge下面是没法访问qbittorrent的，但是macvlan网络的容器之间可以访问，而且路由器访问也是没问题，这里就不介绍如何用代码实现macvlan容器与群晖互通并添加计划任务了，直接将AutoBangumi也建立在macvlan下即可。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24</pre></td><td class="code"><pre class="highlight"><code>version: "3.8"
+ 
+services:
+  AutoBangumi:
+    image: "estrellaxd/auto_bangumi:latest"
+    container_name: AutoBangumi
+    volumes:
+      - ./config:/app/config
+      - ./data:/app/data
+    ports:
+      - "7892:7892"
+    restart: unless-stopped
+    networks: 
+      macnet:
+        ipv4_address: 192.168.2.3
+    environment:
+      - TZ=Asia/Shanghai
+      - AB_METHOD=Advance
+      - PGID=1026
+      - PUID=100
+      - UMASK=022
+networks: 
+  macnet:
+    external: true
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>AutoBangumi经历多个版本，界面已经又换成了中文，配置非常简单，官方也有详细的说明文档，这里就简单说下我自己解析设置的排除内容：<br />
+720 \d+-\d BIG5 繁日双语 先行版 繁體 繁体 Bilibili 繁日内嵌 简体内嵌</p>
+
+<p><strong>4、zflie（简洁直观的在线文件目录程序）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12</pre></td><td class="code"><pre class="highlight"><code>version: "3"
+services:
+  zfile:
+    image: stilleshan/zfile:latest
+    container_name: zfile-cp
+    ports:
+      - 8094:8080
+    volumes:
+      - /volume1/docker/zfile:/root/.zfile-v4:rw
+      - /volume1/1/Share:/root/zfile/data:rw
+    restart: always
+    network_mode: bridge
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>建议就把zfile作为本地共享的一种方式，配置比alist简单多了。</p>
+
+<p><strong>5、chatgpt-web（使用api的ChatGPT演示网页）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30</pre></td><td class="code"><pre class="highlight"><code>version: '3'
+
+services:
+  app:
+    image: chenzhaoyu94/chatgpt-web:latest
+    network_mode: host
+    restart: always
+    ports:
+      - 3002:3002
+    environment:
+      # 二选一
+      OPENAI_API_KEY: sk-*******************************
+      # 二选一
+      # OPENAI_ACCESS_TOKEN: 
+      # API接口地址，可选，设置 OPENAI_API_KEY 时可用
+      OPENAI_API_BASE_URL: https://api.chatanywhere.com.cn
+      # API模型，可选，设置 OPENAI_API_KEY 时可用
+      # OPENAI_API_MODEL: 
+      # 反向代理，可选
+      # API_REVERSE_PROXY: 
+      # 访问权限密钥，可选
+      AUTH_SECRET_KEY: *******************************
+      # 每小时最大请求次数，可选，默认无限
+      # MAX_REQUEST_PER_HOUR: 0
+      # 超时，单位毫秒，可选
+      TIMEOUT_MS: 60000
+      # Socks代理，可选，和 SOCKS_PROXY_PORT 一起时生效
+      # SOCKS_PROXY_HOST: 
+      # Socks代理端口，可选，和 SOCKS_PROXY_HOST 一起时生效
+      # SOCKS_PROXY_PORT: 
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>推荐去这里领取免费api，<a href="https://github.com/chatanywhere/GPT_API_free">https://github.com/chatanywhere/GPT_API_free</a>，上面我自己用不到的部分都用#注释了，有需要可以自己去#添加。</p>
+
+<p><strong>6、speedtest（测速软件，测试你当前的设备和群晖之间的网速）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11</pre></td><td class="code"><pre class="highlight"><code>version: "3"
+
+services:
+  web:
+    image: adolfintel/speedtest:latest
+    container_name: speedtest
+    hostname: speedtest
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - 8844:80
+</code></pre></td></tr></tbody></table></div></div>
+
+<p><strong>7、qdtoday（自动签到，支持大部分论坛和部分应用）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11</pre></td><td class="code"><pre class="highlight"><code>version: "3"
+services:
+  qiandao:
+    image: qdtoday/qd:latest
+    container_name: qiandao
+    network_mode: bridge
+    volumes:
+      - /volume1/docker/qiandao:/usr/src/app/config
+    ports:
+      - 8923:80
+    restart: unless-stopped
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>配置很复杂，不过主要难点还是在于获取cookies，电脑上就用Chrome之类的按F12获取，手机上推荐Alook和VNET，另外推荐一个仓库：https://github.com/wjf0214/qd-templates，分支写master。</p>
+
+<p><strong>8、qinglong（自动京东打工签到，还支持阿里云盘）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11</pre></td><td class="code"><pre class="highlight"><code>version: '2'
+services:
+  web:
+    container_name: qinglong
+    image: whyour/qinglong:latest
+    network_mode: bridge
+    volumes:
+      - /volume1/docker/qinglong:/ql/data
+    ports:
+      - "0.0.0.0:5700:5700"
+    restart: unless-stopped
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>推荐KingRan库，https://github.com/KingRan/KR.git<br />
+阿里云盘每日签到，https://github.com/mrabit/aliyundriveDailyCheck.git<br />
+以及二次元虫洞的签到脚本，<a href="https://github.com/CelestialRipple/2cycd_Autosignin/blob/main/autosignin.py">https://github.com/CelestialRipple/2cycd_Autosignin/blob/main/autosignin.py</a><br />
+添加脚本的时候，直接去脚本管理新建一个文件，取名2cycd.py，记得一定要加.py，复制上面的代码进去，然后去定时任务那里新建一个任务，命令/脚本填写task 2cycd.py，定时规则比如每天8点，0 8 * * *，这样就可以了。<br />
+另外京东的环境变量可以只写JD_WSCK，需要手机app抓取（推荐），也可以在网页抓JD_COOKIE，失效很快就是。前者格式为pin=123;wskey=123;（注意最后的;），后者格式为pt_key=123;pt_pin=123;（注意最后的;）。</p>
+
+<p><strong>9、flaresolverr（签到PT站等脚本的依赖，作用是跳过cloudflare的验证）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14</pre></td><td class="code"><pre class="highlight"><code>version: "3"
+
+services:
+  web:
+    image: 15cm/flaresolverr:3.0.0
+    container_name: flaresolverr
+    hostname: flaresolverr
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - 8191:8191
+    environment:
+      - TZ="Asia/Shanghai"
+      - LOG_LEVEL=info
+</code></pre></td></tr></tbody></table></div></div>
+
+<p><strong>10、reader（非常有名的Legado的docker版阅读器）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19</pre></td><td class="code"><pre class="highlight"><code>version: '3.1'
+
+services:
+  reader:
+    container_name: reader
+    image: hectorqin/reader:latest
+    restart: always
+    network_mode: bridge
+    ports:
+      - 4395:8080
+    volumes:
+      - /volume1/docker/reader/logs:/logs
+      - /volume1/docker/reader/storage:/storage
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - READER_APP_SECURE=true #开启登录鉴权，开启后将支持多用户模式
+      - READER_APP_CACHECHAPTERCONTENT=true #是否开启缓存章节内容 V2.0
+      - READER_APP_SECUREKEY=123456  #管理员密码  可自行修改
+      - READER_APP_INVITECODE=123456 #注册邀请码,如需要取消注释 可自行修改
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>个人感觉比calibre好用，推荐作为本地书籍的在线阅读管理器，当然也可以添加网络源。</p>
+
+<p><strong>11、ms-ra-forwarder（一个本地的在线文本转语音API，支持微软语音）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13</pre></td><td class="code"><pre class="highlight"><code>version: '3'
+
+services:
+  ms-ra-forwarder:
+    container_name: ms-ra-forwarder
+    image: wxxxcxx/ms-ra-forwarder:latest
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - 3000:3000
+    environment:
+      # 不需要可以不用设置环境变量
+      - TOKEN=123456
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>搭配上面的reader使用。</p>
+
+<p><strong>12、Alist（多网盘文件列表程序）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19</pre></td><td class="code"><pre class="highlight"><code>version: '3.3'
+services:
+    alist:
+        image: 'xhofe/alist:latest'
+        container_name: alist
+        volumes:
+            - '/volume1/docker/alist:/opt/alist/data'
+            - '/volume1/1/downloads/the story:/1'
+            - '/volume2/2/after story:/2'
+            - '/volume3/3/temp:/3'
+            - '/volume4/4/before story:/4'
+        ports:
+            - '5244:5244'
+        environment:
+            - PUID=1026
+            - PGID=100
+            - UMASK=022
+        restart: unless-stopped
+        network_mode: host
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>群晖的Alist和aria2、qb的联动，导入种子后的下载权限总是有问题，提示下载错误。再加上离线下载这个功能并不太实用，试了很多权限添加方式后，都不行，果断放弃了，欢迎有爱的大佬告诉我解决方法呀~</p>
+
+<p><strong>13、NASTools（NAS媒体库管理工具）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19</pre></td><td class="code"><pre class="highlight"><code>version: "3"
+services:
+  nas-tools:
+    image: hsuyelin/nas-tools:latest
+    ports:
+      - 3003:3000
+    volumes:
+      - /volume1/docker/nas-tools:/config
+      - /volume3/3:/3
+    environment: 
+      - PUID=1026
+      - PGID=100
+      - UMASK=022
+      - NASTOOL_AUTO_UPDATE=false
+      - NASTOOL_CN_UPDATE=false
+    restart: always
+    network_mode: bridge
+    hostname: nas-tools
+    container_name: nas-tools
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>本人用nastools主要是用于创建硬链接，PT刷流什么的，还是喜欢手动。</p>
+
+<p><strong>14、CloudDrive2（云盘本地挂载的一站式的多云盘解决方案）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11</pre></td><td class="code"><pre class="highlight"><code>sudo -i
+#获取root权限
+mkdir -p /etc/systemd/system/docker.service.d/
+cat &lt;&lt;EOF &gt; /etc/systemd/system/docker.service.d/clear_mount_propagation_flags.conf
+[Service]
+MountFlags=shared
+EOF
+#开启MountFlags
+mount --make-shared /volume1
+#开启share类型挂载，这里需要预先在群晖控制面板-共享文件夹里新建一个共享文件夹，这里以建立在volume1硬盘下自定义名称为CloudNAS的共享文件夹为例进行演示，如果你建立在其他volume，请自行更改命令行里的数字
+#后续每次启动docker前都需要运行mount……volume1这一行命令，建议在群辉控制面板-计划任务，新增触发的任务，并设置开机启动即可
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>事先准备完成后，下面是compose——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22</pre></td><td class="code"><pre class="highlight"><code>version: "3.8"
+services:
+  cloudnas:
+    image: cloudnas/clouddrive2:latest
+    container_name: clouddrive2
+    network_mode: bridge
+    environment:
+      - TZ=Asia/Shanghai
+      - CLOUDDRIVE_HOME=/Config
+    volumes:
+      - /volume1/CloudNAS:/CloudNAS:shared
+      - /volume1/docker/clouddrive2:/Config
+      - /volume1/1:/1
+      - /volume2/2:/2
+      - /volume3/3:/3
+      - /volume4/4:/4
+    ports:
+      - 29798:19798
+    devices:
+      - /dev/fuse:/dev/fuse
+    restart: unless-stopped
+    privileged: true
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>可以建立多个，比如我还建立了一个如下——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22</pre></td><td class="code"><pre class="highlight"><code>version: "3.8"
+services:
+  cloudnas:
+    image: cloudnas/clouddrive2:latest
+    container_name: clouddrive
+    network_mode: bridge
+    environment:
+      - TZ=Asia/Shanghai
+      - CLOUDDRIVE_HOME=/Config
+    volumes:
+      - /volume1/CloudNAS:/CloudNAS:shared
+      - /volume1/docker/clouddrive:/Config
+      - /volume1/1:/1
+      - /volume2/2:/2
+      - /volume3/3:/3
+      - /volume4/4:/4
+    ports:
+      - 19798:19798
+    devices:
+      - /dev/fuse:/dev/fuse
+    restart: unless-stopped
+    privileged: true
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>注意：想要映射给容器里的本地文件夹目录，挂载时后面不需要加“:share”，容器创建完成后需要登录clouddrive2进行挂载网盘操作，具体可以参考<a href="https://www.huluohu.com/posts/332/">https://www.huluohu.com/posts/332/</a>的第四步——<br />
+1、选择需要挂载的网盘，然后点击上面的“电脑”图标<br />
+2、在弹出的界面中选择挂载点，选择<code class="language-plaintext highlighter-rouge">/CloudNAS</code><br />
+3、选完以后，点击<code class="language-plaintext highlighter-rouge">挂载</code>，就 OK 啦（可自定义挂载文件夹名称）</p>
+
+<p>如果嫌麻烦，也可以使用矿神源的套件版来安装clouddrive2，套件地址——https://spk7.imnks.com/，开机启动脚本更换为——sudo sed -i ‘s/package/root/g’ /var/packages/CloudDrive2/conf/privilege<br />
+不过套件每次安装后都会在群辉系统里残留很多垃圾，比如系统内部用户、一些缓存设置文件之类的，如果有强迫症，可以参考这篇文章进行删除<a href="https://www.takochan.moe/archives/91">https://www.takochan.moe/archives/91</a>，需要root执行权限，请务必小心操作！</p>
+
+<p><strong>15、miniflux（开源轻量级 RSS 阅读器）</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38</pre></td><td class="code"><pre class="highlight"><code>version: "3"
+services:
+  miniflux:
+    image: miniflux/miniflux:latest
+    container_name: miniflux
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://miniflux:secret@db/miniflux?sslmode=disable
+      - RUN_MIGRATIONS=1
+      - FETCH_YOUTUBE_WATCH_TIME=1
+      - CREATE_ADMIN=1
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=adminadmin
+      - BASE_URL=http://127.0.0.1:8480
+      - POLLING_FREQUENCY=20
+      - POLLING_PARSING_ERROR_LIMIT=0
+      - BATCH_SIZE=100
+      - POLLING_SCHEDULER=entry_frequency
+      - SCHEDULER_ENTRY_FREQUENCY_MAX_INTERVAL=45
+      - MEDIA_PROXY_PRIVATE_KEY=password
+      - DATABASE_MAX_CONNS=50
+      - DATABASE_MIN_CONNS=5
+      - WORKER_POOL_SIZE=10
+    restart: always
+    ports:
+      - "8480:8080"
+
+  db:
+    image: postgres:latest
+    container_name: miniflux-postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=miniflux
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=miniflux
+    volumes:
+      - /volume1/docker/miniflux:/var/lib/postgresql/data
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>注意提前创建/volume1/docker/miniflux目录来装postgres的数据库，开启文件夹everyone读写权限并保证为空白目录（目录下没有任何文件、文件夹）。admin/adminadmin的用户名和密码登录后均可修改，SCHEDULER_ENTRY_FREQUENCY_MAX_INTERVAL变量最高就是30min刷新一次，我这里设置成45也没有效果，如果不需要如此频繁的刷新，建议手动禁止（如一些个人博客之类的）。<br />
+还有就是项目会自行创建一个miniflux_default的bridge网络，这个保持这样就好，不然会报错（miniflux无法找到数据库，会一直去dns服务器:53的地址找）。原因大概如下——</p>
+
+<p>User-defined bridges provide automatic DNS resolution between containers.<br />
+Containers on the default bridge network can only access each other by IP addresses, unless you use the –link option, which is considered legacy. On a user-defined bridge network, containers can resolve each other by name or alias.<br />
+翻译过来大意：就是用户自定义的网卡可以在容器之间提供自动的 DNS 解析，缺省的桥接网络上的容器只能通过 IP 地址互相访问，除非使用 –link 参数。在用户自定义的网卡上，容器直接可以通过名称或者别名相互解析。</p>
+
+<p>如果需要自建rsshub服务，可以参考如下配置——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44<br/>45<br/>46<br/>47<br/>48<br/>49<br/>50<br/>51<br/>52<br/>53<br/>54<br/>55<br/>56<br/>57<br/>58<br/>59<br/>60<br/>61<br/>62<br/>63<br/>64<br/>65<br/>66<br/>67<br/>68<br/>69<br/>70</pre></td><td class="code"><pre class="highlight"><code>version: "3"
+services:
+  miniflux:
+    image: miniflux/miniflux:latest
+    container_name: miniflux
+    depends_on:
+      - db
+      - rsshub
+    environment:
+      - DATABASE_URL=postgres://miniflux:secret@db/miniflux?sslmode=disable
+      - RUN_MIGRATIONS=1
+      - FETCH_YOUTUBE_WATCH_TIME=1
+      - CREATE_ADMIN=1
+      - ADMIN_USERNAME=admin
+      - ADMIN_PASSWORD=adminadmin
+      - BASE_URL=http://127.0.0.1:8480
+      - POLLING_FREQUENCY=60
+      - POLLING_PARSING_ERROR_LIMIT=0
+      - BATCH_SIZE=100
+      - POLLING_SCHEDULER=entry_frequency
+      - SCHEDULER_ENTRY_FREQUENCY_MAX_INTERVAL=30
+      - MEDIA_PROXY_PRIVATE_KEY=password
+      - DATABASE_MAX_CONNS=50
+      - DATABASE_MIN_CONNS=5
+      - WORKER_POOL_SIZE=10
+    restart: always
+    ports:
+      - "8480:8080"
+
+  db:
+    image: postgres:latest
+    container_name: miniflux-postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=miniflux
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=miniflux
+    volumes:
+      - /volume1/docker/miniflux:/var/lib/postgresql/data
+  rsshub:
+    image: diygod/rsshub:latest
+    container_name: miniflux-rsshub
+    restart: always
+    ports:
+      - "1200:1200"
+    environment:
+      NODE_ENV: production
+      CACHE_TYPE: redis
+      REDIS_URL: 'redis://redis:6379/'
+      PUPPETEER_WS_ENDPOINT: 'ws://browserless:3000'
+    depends_on:
+      - redis
+      - browserless
+  browserless:
+      image: browserless/chrome:latest
+      container_name: miniflux-browserless
+      restart: always
+      ulimits:
+        core:
+          hard: 0
+          soft: 0
+  redis:
+      image: redis:alpine
+      container_name: miniflux-redis
+      restart: always
+      volumes:
+          - redis-data:/data
+
+volumes:
+    redis-data:
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>我个人是觉得官方的rsshub.app已经足够好用了，没必要浪费服务器资源自己搭建，当然有需要用到个人cookies的除外。创建好后在订阅地址填写http://rsshub:1200/或者http://内网服务器ip地址:1200/就行，若要映射到公网请自行研究。<br />
+再提一嘴，大部分个人博客网站，包括wordpress在内的默认rss订阅地址都是网址/feed，比如本站就是&lt;/assets/feed/&gt;，阿里嘎多喵。</p>
+
+<p>另外如果没有软路由还可以用DDNS-GO来进行ddns。</p>
+
+<p>以后发现了其他有意思好玩实用的docker项目再推荐给大家~祝大家新年快乐，天天开心。</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2024/03/%E8%BD%AC%E8%BD%BD%E7%9C%9F%E7%9A%84%E6%98%AF%E4%B8%80%E4%B8%AA%E6%97%B6%E4%BB%A3%E7%9A%84%E8%90%BD%E5%B9%95%EF%BC%9F/" rel="next" title="(转载)真的是一个时代的落幕？">
+                <i class="fa fa-chevron-left"></i> (转载)真的是一个时代的落幕？
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2024/01/%E7%BE%A4%E6%99%96docker%E5%BC%80%E5%90%AFipv6%E5%8F%8C%E6%A0%88%E5%8D%B3%E5%AF%B9%E5%BA%94openwrt%E8%AE%BE%E7%BD%AE/" rel="prev" title="群晖docker开启ipv6双栈即对应openwrt设置">
+                群晖docker开启ipv6双栈即对应openwrt设置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.png"
+               alt="稲葉飯" />
+          <p class="site-author-name" itemprop="name">稲葉飯</p>
+           
+              <p class="site-description motion-element" itemprop="description">饭饭的github小窝,一个白嫖的网站</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">132</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">稲葉飯</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
