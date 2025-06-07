@@ -1,0 +1,1643 @@
+
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/assets/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/assets/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/assets/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="饭饭AniTalks" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文推荐设置为Redir-Host兼容模式，默认开启ipv6，规避BT、PT流量走代理，以及dns防泄漏，去广告（可选）。">
+<meta name="keywords" content="饭饭AniTalks,饭饭Ani,饭饭的小窝,饭饭">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenWrt插件OpenClash推荐配置">
+<meta property="og:url" content="http://localhost:4000/2025/05/openwrt%E6%8F%92%E4%BB%B6openclash%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE/">
+<meta property="og:site_name" content="饭饭AniTalks">
+<meta property="og:description" content="本文推荐设置为Redir-Host兼容模式，默认开启ipv6，规避BT、PT流量走代理，以及dns防泄漏，去广告（可选）。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-1.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-2.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-3.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-4.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-5.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-6.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-7.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-8.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-9-1600x182.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-23-1600x1072.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-24-662x1600.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-25-809x1600.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-26.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-11-1600x1398.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-10.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-12.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-13.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-14.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-15-1600x1124.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-16.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-17.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-18.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-19.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-20.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/1748865772-image-27.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-21.webp">
+<meta property="og:image" content="/assets/wp-content/uploads/2025/05/image-22.webp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenWrt插件OpenClash推荐配置">
+<meta name="twitter:description" content="本文推荐设置为Redir-Host兼容模式，默认开启ipv6，规避BT、PT流量走代理，以及dns防泄漏，去广告（可选）。">
+<meta name="twitter:image" content="/assets/wp-content/uploads/2025/05/image.webp">
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://localhost:4000/"/>
+
+
+
+
+
+  <title>OpenWrt插件OpenClash推荐配置 | 饭饭AniTalks</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">饭饭AniTalks</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">饭饭的小窝，动漫评论与随笔分享</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-home2">
+          <a href="https://ffani.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            ffani.com
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-home3">
+          <a href="https://blog.ffani.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            blog.ffani.com
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间线
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-friendship">
+          <a href="/friendship" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br />
+            
+            友情链接
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-nyanpasu">
+          <a href="/nyanpasu" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-rocket"></i> <br />
+            
+            喵帕斯
+          </a>
+        </li>
+      
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于我
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+<div id="posts" class="posts-expand">
+  
+  
+
+  
+
+  
+  
+  
+
+  <article class="post post-type- " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/2025/05/openwrt%E6%8F%92%E4%BB%B6openclash%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="饭饭">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/assets/images/avatar.webp">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="饭饭AniTalks">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+          
+          
+            OpenWrt插件OpenClash推荐配置
+          
+        </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2025-05-18T23:56:47+08:00">
+                2025-05-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/category/#/%E7%A8%8B%E5%BA%8F%E9%AD%94%E6%B3%95%E7%AC%94%E8%AE%B0" itemprop="url" rel="index">
+                    <span itemprop="name">程序魔法笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            
+                <div class="post-description">
+                    
+                </div>
+            
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <p>本文推荐设置为<strong>Redir-Host</strong>兼容模式，默认开启ipv6，规避BT、PT流量走代理，以及dns防泄漏，去广告（可选）。</p>
+
+<p>如需<strong>Fake-IP</strong>增强模式的设置，可参考<br />
+<a href="https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88">https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88</a><br />
+这里进行设置，话不多说我们开始吧~</p>
+
+<p>本文大部分配置参考的上述链接文章的配置，只是针对<strong>Redir-Host</strong>兼容模式做了些许修改，并建议搭配smartdns做到无需机场节点支持ipv6，同样可以解析ipv6和防泄漏的效果。</p>
+
+<h2 id="一准备工作">一、准备工作</h2>
+
+<h3 id="11-关闭-dns-重定向功能">1.1 关闭 DNS 重定向功能</h3>
+
+<p>位于 网络 &gt; DHCP/DNS 页面中，务必关闭。</p>
+
+<h3 id="12-设置ipv6">1.2 设置IPv6</h3>
+
+<p>参考<br />
+<a href="https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenWrt-IPv6-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88">https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenWrt-IPv6-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88</a></p>
+
+<p>这里提一下比较重要的几个点——<br />
+（1）关闭 Dnsmasq 的“过滤 IPv6 AAAA 记录”功能<br />
+（2）WAN 口设置 IPv6 地址（推荐自动创建）<br />
+① 不需要新建 WAN6，已有的 WAN6 接口要删除<br />
+② 在 WAN 口的高级设置中，开启 IPv6 的选项，并勾选使用运行商通告的 DNS<br />
+③ 禁用<code class="language-plaintext highlighter-rouge">IPv6 分配长度</code><br />
+④ 启用<code class="language-plaintext highlighter-rouge">委托 IPv6 前缀</code>(启用的话 lan 是没有 IPv6 地址的)<br />
+⑤ <code class="language-plaintext highlighter-rouge">IPv6 首选项</code>不要填，填了会获取不到地址的<br />
+⑥ 按图设置</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image.webp" alt="" /><img src="/assets/wp-content/uploads/2025/05/image-1.webp" alt="" />⑦ 在 <code class="language-plaintext highlighter-rouge">WAN 接口</code>的 <code class="language-plaintext highlighter-rouge">DHCP</code> 中检查设置，确保 <code class="language-plaintext highlighter-rouge">DHCP &gt; IPv6 设置</code>已经关闭</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-2.webp" alt="" />⑧ 保存并应用设置后，你的接口界面中应该会出现一个虚拟的 wan_6接口。注意此接口是无法编辑设置的。确认红框中的 <code class="language-plaintext highlighter-rouge">IPv6-PD</code> 地址，获取到了这个地址才能进行下一步操作</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-3.webp" alt="" />（3）LAN 口设置下发 IPv6 地址</p>
+
+<p>① <code class="language-plaintext highlighter-rouge">“委托 IPv6 前缀”</code>允许下级设备再划分子网，按需勾选</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-4.webp" alt="" />② 参考<br />
+<a href="https://github.com/immortalwrt/user-FAQ/blob/main/immortalwrt%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8C%87%E5%8C%97.md#5-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E4%BD%BF%E7%94%A8ipv60">https://github.com/immortalwrt/user-FAQ/blob/main/immortalwrt%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%8C%87%E5%8C%97.md#5-%E5%A6%82%E4%BD%95%E4%BC%98%E9%9B%85%E7%9A%84%E4%BD%BF%E7%94%A8ipv60</a><br />
+的配置，设置 LAN 口的 IPv6 网络地址分配服务，让局域网设备可以取得 IPv6 地址</p>
+
+<p>在 <code class="language-plaintext highlighter-rouge">LAN &gt; 高级设置 &gt; IPv6 后缀</code> 中填入 <code class="language-plaintext highlighter-rouge">eui64</code></p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-5.webp" alt="" />③ 禁止 OpenWrt 通告 IPv6 地址的 DNS</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-6.webp" alt="" /><img src="/assets/wp-content/uploads/2025/05/image-7.webp" alt="" />说个题外话，IPV6如何正确配置端口转发，可以参考这里的配置，在 网络 - 防火墙 - 通信规则 里，高级设置里 地址族限制 设置仅ipv6。<br />
+目标地址的格式为——<br />
+::42:c0ff:fea8:202/::ffff:ffff:ffff:ffff<br />
+前四位为你转发目标地址 公网和LAN口下发的ipv6地址相同 的后四位，/后面的内容是固定的。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-8.webp" alt="" /><img src="/assets/wp-content/uploads/2025/05/image-9-1600x182.webp" alt="" />### 1.3 设置 SmartDNS 服务器</p>
+
+<p>自动设置 Dnsmasq <strong>取消勾选</strong>，分别设置两组dns，如CN和GW，上游服务器这里，CN组设置国内的任意服务器，GW设置国外的，并在高级设置中勾选“<strong>从默认组中排除</strong>”和“<strong>使用代理</strong>”。图中的dns如下（打码的是运营商dns）——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6</pre></td><td class="code"><pre class="highlight"><code>https://doh.pub/dns-query
+https://dns.alidns.com/dns-query
+tls://8.8.8.8
+tls://1.1.1.1
+https://1.1.1.1/dns-query
+https://dns.google/dns-query
+</code></pre></td></tr></tbody></table></div></div>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-23-1600x1072.webp" alt="" />高级设置部分如下，勾选IPV6 服务器、绑定到设备、双栈 IP 优选、域名预加载、缓存过期服务、缓存大小（建议设置20000以上）、持久化缓存、解析本地主机名、停用 HTTPS 记录解析、域名 TTL 最小值（设置为5）。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-24-662x1600.webp" alt="" />第二 DNS 服务器设置如下，设置好服务器组为GW，勾选跳过测速、跳过 Cache即可。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-25-809x1600.webp" alt="" />代理服务器设置格式，如socks5://Clash:HsO7cyZp@127.0.0.1:7891，用户和密码在openclash的覆写设置的最下面的“设置 SOCKS5/HTTP(S) 认证信息”中，ip填本地地址127.0.0.1即可，端口是openclash的覆写设置常规设置中的“SOCKS5 代理端口”。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-26.webp" alt="" />## 二、OpenClash插件设置</p>
+
+<h3 id="21-模式设置">2.1 模式设置</h3>
+
+<p>设置模式为<strong>Redir-Host</strong>兼容模式后，不用做任何修改。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-11-1600x1398.webp" alt="" />### 2.2 流量控制</p>
+
+<p><strong>***仅允许常用端口流量</strong>**设置为默认常用端口，并开启绕过中国大陆。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-10.webp" alt="" />如果你平时要使用 Google Play，请在 <code class="language-plaintext highlighter-rouge">流量控制 &gt; 绕过指定区域 IPv4 黑名单</code>中添加如下四条域名：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><pre class="highlight"><code>services.googleapis.cn
+googleapis.cn
+xn--ngstr-lra8j.com
+clientservices.googleapis.com
+</code></pre></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<h3 id="23-dns-设置">2.3 DNS 设置</h3>
+
+<p>设置使用 Dnsmasq 进行转发。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-12.webp" alt="" />### 2.4 流媒体增强（可选）</p>
+
+<p>此页是可选功能，非必要不使用。建议跳过，或者参考<br />
+<a href="https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88#24-%E6%B5%81%E5%AA%92%E4%BD%93%E5%A2%9E%E5%BC%BA%E5%8F%AF%E9%80%89">https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88#24-%E6%B5%81%E5%AA%92%E4%BD%93%E5%A2%9E%E5%BC%BA%E5%8F%AF%E9%80%89</a><br />
+进行设置。</p>
+
+<h3 id="25-黑白名单">2.5 黑白名单</h3>
+
+<p>如果开启了ipv6，建议使用“不走代理的局域网设备 Mac”来指定局域网设备直连或者代理。<br />
+如果只有ipv4，那么直接设置“不走代理的局域网设备 IP”就行了，如“192.168.2.5”。</p>
+
+<h3 id="26-ipv6-设置">2.6 IPv6 设置</h3>
+
+<p>只要你拥有本地公网ipv6地址，即使你的节点不支持 IPv6 出站，请同样<strong>开启</strong>“IPv6 流量代理”和“允许 IPv6 类型 DNS 解析”，并设置绕过中国大陆。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-13.webp" alt="" />如果你启用了此处的 IPv6 功能，并且平时要使用 Google Play，请绕过指定区域 IPv6 黑名单中添加如下四条域名：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4</pre></td><td class="code"><pre class="highlight"><code>services.googleapis.cn
+googleapis.cn
+xn--ngstr-lra8j.com
+clientservices.googleapis.com
+</code></pre></td></tr></tbody></table></td></tr></tbody></table></div></div>
+
+<h3 id="27-geo-数据库订阅">2.7 GEO 数据库订阅</h3>
+
+<p>三个全部勾选定时更新，频率建议设置如——每周一3:00、4:00、5:00这样。<br />
+更新时间务必错开，几个数据库、白名单以及订阅更新不要选择同一更新时间。<br />
+设置完后点击页面下方的“保存设置”，然后顺手把三个“检查并更新”按钮都点一遍。<br />
+在 OpenClash 的“运行日志”页面可以查看更新结果。</p>
+
+<h3 id="28-大陆白名单订阅">2.8 大陆白名单订阅</h3>
+
+<p>同样的，勾选自动更新，如每周一6:00。<br />
+注意，每次白名单更新成功后 OpenClash 会自动重启，建议设置更新时间为不用网的时候，比如凌晨。<br />
+设置完后点击页面下方的<code class="language-plaintext highlighter-rouge">“保存设置”</code>，然后顺手把<code class="language-plaintext highlighter-rouge">“检查并更新”</code>按钮点一下。<br />
+在 OpenClash 的<code class="language-plaintext highlighter-rouge">“运行日志”</code>页面可以查看更新结果。</p>
+
+<h3 id="29-开发者选项去广告可选">2.9 开发者选项（去广告，可选）</h3>
+
+<p>参考<br />
+<a href="https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/%E6%97%A0%E6%8F%92%E4%BB%B6%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%8A%9F%E8%83%BD%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88">https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/%E6%97%A0%E6%8F%92%E4%BB%B6%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%8A%9F%E8%83%BD%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88</a><br />
+这篇教程进行设置即可。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-14.webp" alt="" />推荐使用“原版 adblockfilters 去广告规则 + Github 520 加速规则”</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12<br/>13<br/>14<br/>15<br/>16<br/>17<br/>18<br/>19<br/>20<br/>21<br/>22<br/>23<br/>24<br/>25<br/>26<br/>27<br/>28<br/>29<br/>30<br/>31<br/>32<br/>33<br/>34<br/>35<br/>36<br/>37<br/>38<br/>39<br/>40<br/>41<br/>42<br/>43<br/>44<br/>45<br/>46<br/>47<br/>48<br/>49<br/>50<br/>51<br/>52<br/>53<br/>54<br/>55<br/>56<br/>57<br/>58<br/>59<br/>60<br/>61<br/>62<br/>63<br/>64<br/>65<br/>66<br/>67<br/>68<br/>69<br/>70<br/>71<br/>72<br/>73<br/>74<br/>75<br/>76<br/>77<br/>78<br/>79<br/>80<br/>81<br/>82<br/>83<br/>84<br/>85</pre></td><td class="code"><pre class="highlight"><code># ==============以下是广告过滤规则拉取脚本=================
+(
+    VERSION="1.4"
+    MAX_WAIT_TIME=30
+    WAIT_INTERVAL=2
+    elapsed_time=0
+
+    if /etc/init.d/openclash status | grep -q "Syntax:"; then
+        LOG_OUT "[广告过滤规则拉取脚本] 当前版本 $VERSION，正在检测 OpenClash 运行状态..."
+        LOG_OUT "[广告过滤规则拉取脚本] 等待 10 秒以确保 OpenClash 已启动..."
+        sleep 10
+    else
+        LOG_OUT "[广告过滤规则拉取脚本] 当前版本 $VERSION，正在检测 OpenClash 运行状态..."
+        while ! /etc/init.d/openclash status | grep -q "running"; do
+            if [ $elapsed_time -ge $MAX_WAIT_TIME ]; then
+                LOG_OUT "[广告过滤规则拉取脚本] 未能在 30 秒内检测到 OpenClash 运行状态，脚本已停止运行..."
+                exit 1
+            fi
+            sleep $WAIT_INTERVAL
+            elapsed_time=$((elapsed_time + WAIT_INTERVAL))
+        done
+        LOG_OUT "[广告过滤规则拉取脚本] 检测到 OpenClash 正在运行，10 秒后开始拉取规则..."
+        sleep 10
+    fi
+
+    LOG_OUT "[广告过滤规则拉取脚本] 开始检测 dnsmasq 规则目录..."
+    UCI_OUTPUT=$(uci show dhcp.@dnsmasq[0] 2&gt;/dev/null)
+    
+    if echo "$UCI_OUTPUT" | grep -qE 'cfg[0-9a-f]{6}'; then
+        HASH_ID=$(echo "$UCI_OUTPUT" | grep -oE 'cfg[0-9a-f]{6}' | head -1) 
+        TARGET_DIR="/tmp/dnsmasq.${HASH_ID}.d"
+        LOG_OUT "[广告过滤规则拉取脚本] 当前 dnsmasq 规则目录: $TARGET_DIR"
+    elif echo "$UCI_OUTPUT" | grep -qE '@dnsmasq\[[0-9]+\]'; then
+        TARGET_DIR="/tmp/dnsmasq.d"
+        LOG_OUT "[广告过滤规则拉取脚本] 当前dnsmasq 规则目录: $TARGET_DIR"
+    else
+        TARGET_DIR=$(find /tmp -maxdepth 1 -type d -name "dnsmasq.*.d" | head -n 1)
+        if [ -z "$TARGET_DIR" ]; then
+            LOG_OUT "[广告过滤规则拉取脚本] 错误：未找到有效的 dnsmasq 规则目录，脚本已停止！"
+            exit 1
+        fi
+        LOG_OUT "[广告过滤规则拉取脚本] 检测失败，使用已存在的 dnsmasq 规则目录: $TARGET_DIR"
+    fi
+    
+    if [ ! -d "$TARGET_DIR" ]; then
+        mkdir -p "$TARGET_DIR"
+    fi
+
+    LOG_OUT "[广告过滤规则拉取脚本] 清除已有规则…"
+    rm -f "$TARGET_DIR"/*ad*.conf 
+    sed -i '/# AWAvenue-Ads-Rule Start/,/# AWAvenue-Ads-Rule End/d' /etc/hosts
+    sed -i '/# GitHub520 Host Start/,/# GitHub520 Host End/d' /etc/hosts
+
+    LOG_OUT "[广告过滤规则拉取脚本] 拉取最新的 adblockfilters 广告过滤规则，规则体积较大，请耐心等候…"
+    curl -sS -L -4 --retry 5 --retry-delay 1 "https://gh-proxy.com/https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnsmasq.txt" -o "$TARGET_DIR/adblockfilters-for-dnsmasq.conf" &gt;/dev/null 2&gt;/tmp/adblockfilters-curl.log
+    CURL_EXIT=$?
+
+    if [ $CURL_EXIT -eq 0 ]; then
+        LOG_OUT "[广告过滤规则拉取脚本] adblockfilters 规则拉取成功！保存路径：${TARGET_DIR}/adblockfilters-for-dnsmasq.conf"
+    else
+        LOG_OUT "[广告过滤规则拉取脚本] adblockfilters 规则拉取失败 (错误码:$CURL_EXIT)，查看 /tmp/adblockfilters-curl.log 获取详细信息。"
+        echo "CURL Exit Code: $CURL_EXIT" &gt;&gt; /tmp/adblockfilters-curl.log
+    fi
+
+    LOG_OUT "[广告过滤规则拉取脚本] 拉取最新的 GitHub520 加速规则…"
+    curl -sS -L -4 --retry 5 --retry-delay 1 "https://raw.hellogithub.com/hosts" &gt;&gt; /etc/hosts &gt;/dev/null 2&gt;/tmp/github520-curl.log
+    CURL_EXIT_GH=$?
+
+    if [ $CURL_EXIT_GH -eq 0 ]; then
+        LOG_OUT "[广告过滤规则拉取脚本] GitHub520 加速规则拉取成功！已追加到 /etc/hosts 文件中。"
+    else
+        LOG_OUT "[广告过滤规则拉取脚本] GitHub520 加速规则拉取失败 (错误码:$CURL_EXIT_GH)，查看 /tmp/github520-curl.log 获取详细信息。"
+        echo "CURL Exit Code: $CURL_EXIT_GH" &gt;&gt; /tmp/github520-curl.log
+    fi
+
+    sed -i '/^$/d' /etc/hosts
+    sed -i '/!/d' /etc/hosts
+
+    LOG_OUT "[广告过滤规则拉取脚本] 重新加载 dnsmasq 服务以应用规则…"
+    /etc/init.d/dnsmasq stop
+    /etc/init.d/dnsmasq start
+    LOG_OUT "[广告过滤规则拉取脚本] 脚本运行完毕！"
+
+) &amp;
+# ==============广告过滤规则拉取脚本结束==============
+</code></pre></td></tr></tbody></table></div></div>
+
+<h2 id="三openclash覆写设置">三、OpenClash覆写设置</h2>
+
+<h3 id="31-dns-设置">3.1 DNS 设置</h3>
+
+<p>启用<code class="language-plaintext highlighter-rouge">“自定义上游 DNS 服务器”</code>，并<strong>禁用下方的 <code class="language-plaintext highlighter-rouge">Fallback</code> 和 <code class="language-plaintext highlighter-rouge">Default-NameServer</code> 下的所有服务器</strong>。</p>
+
+<p>PS：fallback就是造成域名偶尔解析失败和dns泄露的原因，迟早会被淘汰掉。</p>
+
+<p>Nameserver-Policy设置如下（指向smartdns中的第一 DNS 服务器）——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2</pre></td><td class="code"><pre class="highlight"><code>"geosite:cn,private,apple":
+  - 127.0.0.1:6053
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>Nameserver只保留smartdns中的“第二 DNS 服务器”的地址，如我这里是smartdns里的6553，设置如下图所示——</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-15-1600x1124.webp" alt="" />### 3.2 Meta 设置</p>
+
+<p>建议<code class="language-plaintext highlighter-rouge">启用 GeoIP Dat 版数据库</code>选项，Geodata 数据加载方式建议禁用，<strong>***启用流量（域名）探测</strong>**和探测（嗅探）纯 IP 连接为必选项，其他设置可以参考图片。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-16.webp" alt="" />### 3.3 规则设置</p>
+
+<p>分上下两个<br />
+上面<strong>**（优先匹配）</strong><strong>——在订阅的yaml默认规则之前执行<br />
+下面</strong><strong>（候补匹配）</strong>** ——在订阅的yaml默认规则之后执行<br />
+格式参考如下，请务必带Emoji和空格一起填写，建议直接在yacd复制即可。（我这里是Emoji和wordpress代码编辑器冲突了，无法保存，故删除）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3<br/>4<br/>5<br/>6<br/>7<br/>8<br/>9<br/>10<br/>11<br/>12</pre></td><td class="code"><pre class="highlight"><code>rules:
+- DOMAIN-SUFFIX,daydream.dmhy.best,DIRECT
+- DOMAIN-SUFFIX,probe.skyey2.com,DIRECT
+- DOMAIN-SUFFIX,jpopsuki.eu,DIRECT
+- DOMAIN-SUFFIX,hdfans.org,手动选择
+- DOMAIN-SUFFIX,pt.btschool.club,DIRECT
+- DOMAIN-SUFFIX,t.audiences.me,手动选择
+- DOMAIN-SUFFIX,tracker.cinefiles.info,手动选择
+- DOMAIN-SUFFIX,tracker.m-team.cc,DIRECT
+- DOMAIN-SUFFIX,ipv6-tracker.m-team.cc,DIRECT
+- DOMAIN-SUFFIX,tracker.52dic.vip,DIRECT
+- DOMAIN-SUFFIX,acg.rip,手动选择
+</code></pre></td></tr></tbody></table></div></div>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-17.webp" alt="" />## 四、OpenClash配置订阅</p>
+
+<p>具体参考<br />
+<a href="https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88#4-%E4%B8%BA-openclash-%E9%85%8D%E7%BD%AE%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF">https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki/OpenClash-%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%A1%88#4-%E4%B8%BA-openclash-%E9%85%8D%E7%BD%AE%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF</a><br />
+的方案，不过我是设置的每周一7:00更新，摘录如下——</p>
+
+<blockquote>
+  <p>在页面中设置一个更新时间，因为本方案中使用的订阅模板使用了大量的第三方规则，而这些规则中的大部分是每天更新的，因此建议同样设置订阅更新时间为每天更新。<br />
+OpenClash 在更新订阅的过程中会短暂重启，所以建议设置在不用网的时间段内更新，比如凌晨。<br />
+注意：开启“绕过中国大陆”后，OpenClash 重启不会影响国内连接。<br />
+设置好后点击“保存配置”，然后点击“添加”按钮，添加一个订阅。</p>
+</blockquote>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-18.webp" alt="" /><img src="/assets/wp-content/uploads/2025/05/image-19.webp" alt="" />我这里就无脑选Custom_Clash.ini了——</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1<br/>2<br/>3</pre></td><td class="code"><pre class="highlight"><code>本项目的标准订阅转换模板，适配所有需求，推荐使用。  
+无DNS泄露，可通过泄露检测网站的测试。  
+使用本项目推荐机场建议直接使用该模板，复刻维护者的使用体验。  
+</code></pre></td></tr></tbody></table></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/cfg/Custom_Clash.ini
+</code></pre></td></tr></tbody></table></div></div>
+
+<p>另外，如果的节点不包括 vless/hy2 等较新的节点类型，直接使用默认服务进行转化即可。<br />
+如果使用了 vless/hy2 节点，可以在<code class="language-plaintext highlighter-rouge">“订阅转换服务地址”</code>中填入下方地址即可。（PS：2025.05实测不是很稳定，容易连接失败）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><table style="margin: 0px"><tbody><tr><td class="gutter"><pre>1</pre></td><td class="code"><pre class="highlight"><code>https://api.asailor.org/sub
+</code></pre></td></tr></tbody></table></div></div>
+
+<h2 id="五检验结果">五、检验结果</h2>
+
+<h3 id="51-检查-dns-是否存在泄漏">5.1 检查 DNS 是否存在泄漏</h3>
+
+<p><a href="https://ipleak.net">https://ipleak.net</a><br />
+正常情况下，页面上方应当出现你的机场节点的 IPv4 和 IPv6 地址（我这里机场节点没有，所以为空），页面下方无中国大陆 DNS 出现即为 DNS 无泄漏情况。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-20.webp" alt="" /><a href="https://browserleaks.com/dns">https://browserleaks.com/dns</a><br />
+同样的，看DNS Leak Test是否出现中国大陆 DNS，没有则为 DNS 无泄漏。</p>
+
+<h3 id="52-检查-ipv6">5.2 检查 IPv6</h3>
+
+<ul>
+  <li>国内 IPv6 测试</li>
+</ul>
+
+<p>国内站点：<a href="https://testipv6.cn/">https://testipv6.cn/</a></p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/1748865772-image-27.webp" alt="" />- 国外 IPv6 测试</p>
+
+<p>国外站点：<a href="http://test-ipv6.com/">http://test-ipv6.com/</a></p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-21.webp" alt="" />如果节点不支持ipv6，显示如下也是正常的，不影响国内网站的ipv6访问和解析。</p>
+
+<p><img src="/assets/wp-content/uploads/2025/05/image-22.webp" alt="" />恭喜你，折腾完毕，至此，就可以愉快冲浪了~</p>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      饭饭
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://localhost:4000/2025/05/openwrt%E6%8F%92%E4%BB%B6openclash%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE/" title="OpenWrt插件OpenClash推荐配置">http://localhost:4000/2025/05/openwrt%E6%8F%92%E4%BB%B6openclash%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+      
+      
+
+      
+      
+        <div class="post-nav" id="post-nav-id">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2025/06/711-720%E9%A5%AD%E9%A5%ADanitalks/" rel="next" title="（711-720）饭饭AniTalks">
+                <i class="fa fa-chevron-left"></i> （711-720）饭饭AniTalks
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2025/01/701-710%E9%A5%AD%E9%A5%ADanitalks/" rel="prev" title="（701-710）饭饭AniTalks">
+                （701-710）饭饭AniTalks <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+      
+
+      
+    </footer>
+  </article>
+
+  <div class="post-spread">
+    
+  </div>
+</div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        
+        
+        
+
+
+
+
+
+
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/assets/images/avatar.webp"
+               alt="饭饭" />
+          <p class="site-author-name" itemprop="name">饭饭</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">140</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+        
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://t.me/sirongzi" target="_blank" title="Telegram">
+                  
+                    <i class="fa fa-fw fa-telegram"></i>
+                  
+                  Telegram
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/sirongzi" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://steamcommunity.com/id/sirongzi/" target="_blank" title="Steam">
+                  
+                    <i class="fa fa-fw fa-steam"></i>
+                  
+                  Steam
+                </a>
+              </span>
+            
+              
+              
+              <span class="links-of-author-item">
+                <a href="https://www.pixiv.net/users/14773678" target="_blank" title="Pixiv">
+                  
+                    <i class="fa fa-fw fa-image"></i>
+                  
+                  Pixiv
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+
+
+
+
+
+
+
+            
+              <div class="post-toc-content">
+    <ol class=nav>
+      <li class="nav-item nav-level-2"> <a class="nav-link" href="#一准备工作"> <span class="nav-number">1</span> <span class="nav-text">一、准备工作</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#11-关闭-dns-重定向功能"> <span class="nav-number">1.1</span> <span class="nav-text">1.1 关闭 DNS 重定向功能</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#12-设置ipv6"> <span class="nav-number">1.2</span> <span class="nav-text">1.2 设置IPv6</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#21-模式设置"> <span class="nav-number">1.3</span> <span class="nav-text">2.1 模式设置</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#23-dns-设置"> <span class="nav-number">1.4</span> <span class="nav-text">2.3 DNS 设置</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#25-黑白名单"> <span class="nav-number">1.5</span> <span class="nav-text">2.5 黑白名单</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#26-ipv6-设置"> <span class="nav-number">1.6</span> <span class="nav-text">2.6 IPv6 设置</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#27-geo-数据库订阅"> <span class="nav-number">1.7</span> <span class="nav-text">2.7 GEO 数据库订阅</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#28-大陆白名单订阅"> <span class="nav-number">1.8</span> <span class="nav-text">2.8 大陆白名单订阅</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#29-开发者选项去广告可选"> <span class="nav-number">1.9</span> <span class="nav-text">2.9 开发者选项（去广告，可选）</span> </a> </li> </ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#三openclash覆写设置"> <span class="nav-number">2</span> <span class="nav-text">三、OpenClash覆写设置</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#31-dns-设置"> <span class="nav-number">2.1</span> <span class="nav-text">3.1 DNS 设置</span> </a> </li> </ol> </li> <li class="nav-item nav-level-2"> <a class="nav-link" href="#五检验结果"> <span class="nav-number">3</span> <span class="nav-text">五、检验结果</span> </a> <ol class="nav-child"> <li class="nav-item nav-level-3"> <a class="nav-link" href="#51-检查-dns-是否存在泄漏"> <span class="nav-number">3.1</span> <span class="nav-text">5.1 检查 DNS 是否存在泄漏</span> </a> </li> <li class="nav-item nav-level-3"> <a class="nav-link" href="#52-检查-ipv6"> <span class="nav-number">3.2</span> <span class="nav-text">5.2 检查 IPv6</span> </a> </li> </ol> </li>
+    </ol>
+  </div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">饭饭</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://jekyllrb.com">Jekyll</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/simpleyyt/jekyll-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  
+  
+  
+  
+  <script type="text/javascript" src="/assets/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/assets/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  <script type="text/javascript" src="/assets/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/assets/js/src/post-details.js?v=5.1.1"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/assets/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+    
+
+  
+
+
+
+
+
+
+
+  
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
+
